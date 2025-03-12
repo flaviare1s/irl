@@ -8,7 +8,7 @@ import { Programas } from "./pages/Programas"
 function App() {
 
   return (
-    <>
+    <div className="font-nunito">
       <BrowserRouter>
       <Header />
         <main>
@@ -20,7 +20,7 @@ function App() {
           </Routes>
         </main>
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 
