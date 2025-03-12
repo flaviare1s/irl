@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-nunito: "Nunito", sans-serif;
+  --color-primary: #2E4DA7;
+  --color-living-coral: #FA7268;
+  --color-freesia: #F6C324;
+  --color-greenery: #88B04B;
+  --color-radiant-orchid: #AD5E99;
+}
