@@ -1,4 +1,4 @@
-export const FacaParte = () => {
+export const Doacoes = () => {
   return (
     <div>FacaParte</div>
   )
