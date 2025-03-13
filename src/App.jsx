@@ -4,6 +4,7 @@ import { Header } from "./components/Header"
 import { Transparencia } from "./pages/Transparencia"
 import { Doacoes } from "./pages/Doacoes"
 import { Programas } from "./pages/Programas"
+import { Footer } from "./components/Footer"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/doacoes" element={<Doacoes />} />
           </Routes>
         </main>
+      <Footer />
       </BrowserRouter>
     </div>
   )
