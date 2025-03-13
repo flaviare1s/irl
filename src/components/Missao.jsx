@@ -1,6 +1,6 @@
 import { Sessao } from "../components/Sessao";
 
-import video from "../assets//videos/Bizu Desktop.mp4";
+import video from "../assets//videos/video.mp4";
 import elementoGrafico from "../assets/img/elementos/elemento-rosa3.png"
 import { SessaoConteudo2 } from "./SessaoConteudo2";
 import { Button } from "./Button";
