@@ -1,6 +1,6 @@
-import Background from '../assets/img/banner.jpg'
-import BackgroundMobile from '../assets/img/banner-mobile.jpg'
-import Pattern from '../assets/img/x.png' 
+import Background from '../assets/img/fotos/banner.jpg'
+import BackgroundMobile from '../assets/img/fotos/banner-mobile.jpg'
+import Pattern from '../assets/img/elementos/x.png' 
 import { Button } from './Button'
 import { Idade } from './Idade'
 
