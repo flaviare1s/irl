@@ -32,7 +32,6 @@ export const Historia = () => {
           />
         ))}
       </div>
-      <Button />
     </Sessao>
   );
 };
