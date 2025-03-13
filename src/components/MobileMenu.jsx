@@ -25,7 +25,7 @@ export const MobileMenu = () => {
   }, []);
 
   return (
-    <div className="sm:hidden">
+    <div className="sm:hidden font-bold">
       <button
         ref={menuButtonRef}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
