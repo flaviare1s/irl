@@ -2,8 +2,8 @@ import { Button } from "../components/Button";
 import { Sessao } from "../components/Sessao";
 import { SessaoConteudo1 } from "../components/SessaoConteudo1";
 
-import foto1 from "../assets/img/foto1.jpg";
-import elementoGrafico from "../assets/img/elemento-amarelo1.png"
+import foto1 from "../assets/img/fotos/foto1.jpg";
+import elementoGrafico from "../assets/img/elementos/elemento-amarelo1.png"
 
 export const Historia = () => {
   const eventos = [

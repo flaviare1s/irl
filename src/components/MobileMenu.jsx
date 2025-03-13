@@ -47,10 +47,10 @@ export const MobileMenu = () => {
         className={`fixed top-[90px] left-0 z-40 w-[95%] h-full bg-primary transition-transform duration-300 ${isMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"}`}
       >
         <div className="flex flex-col items-start px-20 justify-center space-y-4 py-4">
-          <Link to="/" className="text-white" onClick={closeMenu}>IRL</Link>
-          <Link to="/programas" className="text-white" onClick={closeMenu}>Programas</Link>
-          <Link to="/transparencia" className="text-white" onClick={closeMenu}>Transparência</Link>
-          <Link to="/doacoes" className="text-white" onClick={closeMenu}>Faça uma doação</Link>
+          <Link to="/" className="text-white hover:opacity-50" onClick={closeMenu}>IRL</Link>
+          <Link to="/programas" className="text-white hover:opacity-50" onClick={closeMenu}>Programas</Link>
+          <Link to="/transparencia" className="text-white hover:opacity-50" onClick={closeMenu}>Transparência</Link>
+          <Link to="/doacoes" className="text-white hover:opacity-50" onClick={closeMenu}>Faça uma doação</Link>
         </div>
       </div>
     </div>
