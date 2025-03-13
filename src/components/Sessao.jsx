@@ -1,6 +1,6 @@
 import { BotaoDoacoes } from "./BotaoDoacoes";
 
-export const Sessao = ({ title, img, isRowReverse = false, children, elementoGrafico1, elementoGrafico2, descricao, bgColor='bg-white' }) => {
+export const Sessao = ({ title, img, isRowReverse = false, children, elementoGrafico1, elementoGrafico2, descricao, bgColor = 'bg-white' }) => {
   const isVideo = img && (img.endsWith('.mp4') || img.endsWith('.webm') || img.endsWith('.ogg'));
 
   return (
@@ -11,11 +11,11 @@ export const Sessao = ({ title, img, isRowReverse = false, children, elementoGra
         <img className="h-10" src={elementoGrafico2} />
       </div>
       <div className={`flex flex-col lg:flex-row items-center justify-center gap-14 mb-10 ${isRowReverse ? "lg:flex-row-reverse" : ""}`}>
-        <div className="w-full lg:w-1/2 py-10">
+        <div className="w-full lg:w-1/2 py-10 flex justify-center">
           {isVideo ? (
-            <video src={img} alt={descricao} className="rounded-lg" controls />
+            <video src={img} alt={descricao} className="rounded-lg w-full max-w-[700px]" controls />
           ) : (
-            <img src={img} alt={descricao} className="rounded-lg" />
+            <img src={img} alt={descricao} className="rounded-lg w-full max-w-[500px] object-cover" />
           )}
         </div>
         <div className="lg:w-1/2 flex flex-col justify-center items-center md:items-start">
@@ -33,3 +33,4 @@ export const Sessao = ({ title, img, isRowReverse = false, children, elementoGra
     </section>
   );
 };
+
