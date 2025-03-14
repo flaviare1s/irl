@@ -1,6 +1,6 @@
 export const ProgramaComponente = ({ img, nome, descricao }) => {
   return (
-    <section className="flex flex-col items-center justify-center p-10 lg:p-6 h-full">
+    <section className="flex flex-col items-center justify-center p-10 lg:p-4 h-full">
       <img className="mb-5" src={img} />
       <div className="flex-grow flex flex-col items-center">
         <h3 className="text-xl md:text-2xl font-bold text-center mb-5">{nome}</h3>
