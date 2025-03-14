@@ -50,7 +50,7 @@ export const MobileMenu = () => {
           <Link to="/" className="text-white hover:opacity-50" onClick={closeMenu}>IRL</Link>
           <Link to="/programas" className="text-white hover:opacity-50" onClick={closeMenu}>Programas</Link>
           <Link to="/transparencia" className="text-white hover:opacity-50" onClick={closeMenu}>Transparência</Link>
-          <Link to="/doacoes" className="text-white hover:opacity-50" onClick={closeMenu}>Faça uma doação</Link>
+          <Link to="/doacoes" className="text-white hover:opacity-50" onClick={closeMenu}>Faça Uma Doação</Link>
         </div>
       </div>
     </div>
