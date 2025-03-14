@@ -51,7 +51,7 @@ export const MobileMenu = ({ openModal }) => {
 
       <div
         ref={menuRef}
-        className={`fixed top-[90px] left-0 z-40 w-[95%] h-full bg-primary transition-transform duration-300 ${isMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
+        className={`fixed top-[80px] left-0 z-40 w-[95%] h-full bg-primary transition-transform duration-300 ${isMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
           }`}
       >
         <div className="flex flex-col items-start px-20 justify-center space-y-4 py-4">
