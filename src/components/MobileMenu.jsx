@@ -1,18 +1,25 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-export const MobileMenu = () => {
+export const MobileMenu = ({ openModal }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const menuButtonRef = useRef(null);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const handleOpenModal = () => {
+    closeMenu();
+    openModal();
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target) && !menuButtonRef.current.contains(event.target)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
         closeMenu();
       }
     };
@@ -44,13 +51,14 @@ export const MobileMenu = () => {
 
       <div
         ref={menuRef}
-        className={`fixed top-[90px] left-0 z-40 w-[95%] h-full bg-primary transition-transform duration-300 ${isMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"}`}
+        className={`fixed top-[90px] left-0 z-40 w-[95%] h-full bg-primary transition-transform duration-300 ${isMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
+          }`}
       >
         <div className="flex flex-col items-start px-20 justify-center space-y-4 py-4">
           <Link to="/" className="text-white hover:opacity-50" onClick={closeMenu}>IRL</Link>
           <Link to="/programas" className="text-white hover:opacity-50" onClick={closeMenu}>Programas</Link>
           <Link to="/transparencia" className="text-white hover:opacity-50" onClick={closeMenu}>Transparência</Link>
-          <Link to="/doacoes" className="text-white hover:opacity-50" onClick={closeMenu}>Faça Uma Doação</Link>
+          <button onClick={handleOpenModal} className="text-white hover:opacity-50">Faça Uma Doação</button>
         </div>
       </div>
     </div>
