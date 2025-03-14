@@ -1,4 +1,5 @@
 import { Banner } from "../components/Banner"
+import { Depoimentos } from "../components/Depoimentos"
 import { Equipe } from "../components/Equipe"
 import { Historia } from "../components/Historia"
 import { Missao } from "../components/Missao"
@@ -10,6 +11,7 @@ export const Home = () => {
       <Historia />
       <Missao />
       <Equipe />
+      <Depoimentos />
     </div>
   )
 }

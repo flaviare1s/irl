@@ -8,7 +8,7 @@ import img4 from "../assets/img/elementos/figura4.png"
 
 export const Programas = () => {
   return (
-    <div className="bg-radiant-orchid flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 xl:pl-[200px]">
+    <section className="bg-radiant-orchid flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 xl:pl-[200px]">
       <h2 className="text-white text-3xl md:text-5xl text-center font-bold mb-10">Nossos Programas</h2>
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -19,6 +19,6 @@ export const Programas = () => {
           <BotaoDoacoes />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
