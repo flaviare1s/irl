@@ -1,6 +1,6 @@
 import { Sessao } from "../components/Sessao";
 
-import fotoEquipe from "../assets/img/fotos/equipe.jpeg";
+import fotoEquipe from "../assets/img/fotos/equipe.jpg";
 import elementoGrafico from "../assets/img/elementos/elemento-verde1.png"
 import { SessaoConteudo2 } from "./SessaoConteudo2";
 import { Button } from "./Button";
