@@ -1,5 +1,9 @@
+import { Certificados } from "../components/Certificados"
+
 export const Transparencia = () => {
   return (
-    <div>Transparencia</div>
+    <div>
+      <Certificados />
+    </div>
   )
 }
