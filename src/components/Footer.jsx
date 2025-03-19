@@ -11,16 +11,16 @@ export const Footer = () => {
         <div>
           <div className="flex flex-col md:flex-row gap-1 md:gap-7">
             <a href="tel:+558532436120" className="hover:underline">
-              <FaPhone className="inline-block mr-2" /> (85) 3243-6120
+              <FaPhone className="inline-block" /> (85) 3243-6120
             </a>
             <a href="mailto:irl@irl.org.br" className="hover:underline">
-              <FaEnvelope className="inline-block mr-2" /> irl@irl.org.br
+              <FaEnvelope className="inline-block" /> irl@irl.org.br
             </a>
             <a href="https://www.instagram.com/somosirl" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="inline-block mr-2" /> @somosirl
+              <FaInstagram className="inline-block" /> @somosirl
             </a>
             <a href="https://www.facebook.com/somosirl" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="inline-block mr-2" /> @somosirl
+              <FaFacebook className="inline-block" /> @somosirl
             </a>
             <a
               href="https://www.google.com/maps/search/?api=1&query=R.+Eretides+Martins,+977+-+São+Gerardo,+Fortaleza+-+CE,+60320-350"
@@ -28,7 +28,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              <FaMapMarkedAlt className="inline-block mr-2" /> R. Eretides Martins, 977 - São Gerardo, Fortaleza - CE | 60320-350
+              <FaMapMarkedAlt className="inline-block" /> R. Eretides Martins, 977 - São Gerardo, Fortaleza - CE | 60320-350
             </a>
           </div>
         </div>
