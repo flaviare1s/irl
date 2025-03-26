@@ -3,7 +3,7 @@ import Logo from "../assets/img/logo-azul.png";
 
 export const Footer = () => {
   return (
-    <footer className="text-primary font-bold md:font-2xl flex flex-col justify-center">
+    <footer className="text-primary font-bold md:font-2xl flex flex-col justify-center py-3 md:py-0">
       <div className="flex justify-start gap-7 items-center py-2 px-5 md:px-10 md:py-4">
         <div className="h-[80px] w-[120px] md:h-[100px] md:w-[150px]">
           <img className="w-full" src={Logo} alt="Logo do IRL" />
