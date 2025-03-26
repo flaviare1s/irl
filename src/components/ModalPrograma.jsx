@@ -1,9 +1,17 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useState } from "react";
 import { Programa } from "./Programa";
 
 export const ModalPrograma = ({ isOpen, onClose, nome, imagens }) => {
+
+  const [isImageLoading, setIsImageLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -12,7 +20,14 @@ export const ModalPrograma = ({ isOpen, onClose, nome, imagens }) => {
         <button className="absolute top-2 right-3 text-2xl font-bold cursor-pointer" onClick={onClose}>
           ✖
         </button>
-        <Programa nome={nome} imagens={imagens} />
+
+        {isImageLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="w-8 h-8 border-t-4 border-primary border-solid rounded-full animate-spin"></div>
+          </div>
+        )}
+
+        <Programa nome={nome} imagens={imagens} onImageLoad={handleImageLoad} />
       </div>
     </div>
   );

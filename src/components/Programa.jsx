@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-export const Programa = ({ nome, texto, imagens }) => {
+export const Programa = ({ nome, texto, imagens, onImageLoad }) => {
   return (
     <div>
       <h2 className="text-2xl font-bold text-center mb-4">{nome}</h2>
@@ -20,6 +20,7 @@ export const Programa = ({ nome, texto, imagens }) => {
               src={img}
               className="w-full h-auto object-contain rounded-lg"
               alt={`Imagem ${index + 1}`}
+              onLoad={onImageLoad}
             />
           </SwiperSlide>
         ))}

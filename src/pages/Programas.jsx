@@ -10,6 +10,7 @@ import imgAcolhendo3 from "../assets/img/fotos/programas/Acolhendo3.jpg";
 import imgAcolhendo4 from "../assets/img/fotos/programas/Acolhendo4.jpg";
 import imgAcolhendo5 from "../assets/img/fotos/programas/Acolhendo5.jpg";
 import imgBiblioteca1 from "../assets/img/fotos/programas/Biblioteca.jpg";
+import imgBiblioteca2 from "../assets/img/fotos/programas/Biblioteca2.jpg";
 import imgMulheres1 from "../assets/img/fotos/programas/Mulheres.jpg";
 import imgAgrofloresta1 from "../assets/img/fotos/programas/Agrofloresta.jpg";
 
@@ -28,7 +29,7 @@ export const Programas = () => {
           img={img2}
           nome="Biblioteca José Sérgio dos Reis Júnior"
           texto="Um espaço que visa democratizar o acesso ao livro e à leitura na comunidade do entorno do IRL."
-          imagens={[imgBiblioteca1]}
+          imagens={[imgBiblioteca1, imgBiblioteca2]}
         />
         <ProgramaComponente
           img={img3}
