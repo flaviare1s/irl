@@ -1,9 +1,16 @@
 import Modal from 'react-modal';
-import qrcode from '../assets/img/qrcode.png'
+import { useState } from 'react';
+import qrcode from '../assets/img/qrcode.png';
 
 Modal.setAppElement('#root');
 
 export const ModalDoacoes = ({ isOpen, closeModal }) => {
+  const [isImageLoading, setIsImageLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
   return (
     <Modal
       isOpen={isOpen}
@@ -25,8 +32,23 @@ export const ModalDoacoes = ({ isOpen, closeModal }) => {
           X
         </button>
         <div className='flex flex-col justify-center items-center py-4 pl-4 mt-5'>
-          <h2 className="text-xl font-bold mb-4 text-white">Doe via PIX pelo aplicativo do seu banco!</h2>
-          <img className='w-[250px]' src={qrcode} alt="Qr Code" />
+          <h2 className="text-xl font-bold mb-4 text-white">
+            Doe via PIX pelo aplicativo do seu banco!
+          </h2>
+
+          {isImageLoading && (
+            <div className="w-[250px] h-[250px] flex items-center justify-center">
+              <div className="w-8 h-8 border-t-4 border-white border-solid rounded-full animate-spin"></div>
+            </div>
+          )}
+
+          <img
+            className={`w-[250px] ${isImageLoading ? "hidden" : "block"}`}
+            src={qrcode}
+            alt="Qr Code"
+            onLoad={handleImageLoad}
+          />
+
           <p className="mt-6 text-white">CNPJ</p>
           <p className="text-lg mb-6 text-white font-bold">07.264.138/0001-47</p>
         </div>
