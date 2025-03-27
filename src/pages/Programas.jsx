@@ -14,6 +14,7 @@ import imgBiblioteca2 from "../assets/img/fotos/programas/Biblioteca2.jpg";
 import imgMulheres1 from "../assets/img/fotos/programas/Mulheres.jpg";
 import imgAgrofloresta1 from "../assets/img/fotos/programas/Agrofloresta.jpg";
 import imgAgrofloresta2 from "../assets/img/fotos/programas/Agrofloresta2.jpg";
+import { BotaoDoacoes } from "../components/BotaoDoacoes";
 
 export const Programas = () => {
   return (
@@ -44,6 +45,9 @@ export const Programas = () => {
           texto="Com a implementação do sistema agroflorestal - SAF do IRL, busca-se o incentivo a uma vida sustentável e harmoniosa entre seres humanos e o meio ambiente."
           imagens={[imgAgrofloresta1, imgAgrofloresta2]}
         />
+      </div>
+      <div className="sm:hidden">
+        <BotaoDoacoes />
       </div>
     </section>
   );
