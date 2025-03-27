@@ -16,10 +16,10 @@ export const Footer = () => {
             <a href="mailto:irl@irl.org.br" className="hover:underline">
               <FaEnvelope className="inline-block" /> irl@irl.org.br
             </a>
-            <a href="https://www.instagram.com/somosirl" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/somosirl" target="_blank" rel="noopener noreferrer" className="hover:underline">
               <FaInstagram className="inline-block" /> @somosirl
             </a>
-            <a href="https://www.facebook.com/somosirl" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/somosirl" target="_blank" rel="noopener noreferrer" className="hover:underline">
               <FaFacebook className="inline-block" /> @somosirl
             </a>
             <a
