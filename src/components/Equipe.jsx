@@ -11,7 +11,7 @@ export const Equipe = () => {
     <Sessao title="Nossa Equipe" img={fotoEquipe} isRowReverse={true} elementoGrafico1={elementoGrafico}>
       <SessaoConteudo2 text="A equipe IRL é responsável por fazer do Instituto Dr. Rocha Lima um espaço educativo que oportuniza o desenvolvimento de potencialidades inidividuais e coletivas das crianças e adolescentes assistidos." />
       <div className="mt-10">
-        <Button text="Faça Parte" rota="/" bgColor="bg-freesia" />
+        <Button text="Conheça Nossos Programas" rota="/programas" bgColor="bg-freesia" />
       </div>
     </Sessao>
   );
