@@ -8,8 +8,8 @@ export const ProgramaComponente = ({ img, nome, texto, imagens }) => {
     <section className="flex flex-col items-center justify-center p-10 lg:p-4 h-full">
       <img className="mb-5 w-[150px] h-[150px]" src={img} alt={nome} />
       <div className="flex-grow flex flex-col items-center">
-        <h3 className="text-xl md:text-2xl font-bold text-center mb-5">{nome}</h3>
-        <p className="text-lg font-medium text-center">{texto}</p>
+        <h3 className="text-xl md:text-2xl font-bold text-center mb-5 text-white">{nome}</h3>
+        <p className="text-lg font-medium text-center text-white">{texto}</p>
       </div>
 
       <button
