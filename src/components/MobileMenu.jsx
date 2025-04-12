@@ -55,10 +55,10 @@ export const MobileMenu = ({ openModal }) => {
           }`}
       >
         <div className="flex flex-col items-start px-20 justify-center space-y-4 py-4">
-          <Link to="/" className="text-white hover:opacity-50" onClick={closeMenu}>IRL</Link>
-          <Link to="/programas" className="text-white hover:opacity-50" onClick={closeMenu}>Programas</Link>
-          <Link to="/transparencia" className="text-white hover:opacity-50" onClick={closeMenu}>Transparência</Link>
-          <button onClick={handleOpenModal} className="text-white hover:opacity-50">Faça Uma Doação</button>
+          <Link to="/" className="text-white link-nav" onClick={closeMenu}>IRL</Link>
+          <Link to="/programas" className="text-white link-nav" onClick={closeMenu}>Programas</Link>
+          <Link to="/transparencia" className="text-white link-nav" onClick={closeMenu}>Transparência</Link>
+          <button onClick={handleOpenModal} className="text-white link-nav cursor-pointer">Faça Uma Doação</button>
         </div>
       </div>
     </div>

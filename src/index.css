@@ -8,3 +8,22 @@
   --color-greenery: #88B04B;
   --color-radiant-orchid: #AD5E99;
 }
+
+.link-nav {
+  position: relative;
+}
+
+.link-nav::after {
+  position: absolute;
+  content: "";
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--color-living-coral);
+  transition: width 0.3s ease;
+}
+
+.link-nav:hover::after {
+  width: 100%;
+}
