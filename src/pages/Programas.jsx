@@ -1,45 +1,41 @@
-import { ProgramaComponente } from "../components/ProgramaComponente";
-import img1 from "../assets/img/elementos/figura1.png";
-import img3 from "../assets/img/elementos/figura3.png";
-import img4 from "../assets/img/elementos/figura4.png";
-
-import imgAcolhendo1 from "../assets/img/fotos/programas/Acolhendo.jpg";
-import imgAcolhendo2 from "../assets/img/fotos/programas/Acolhendo2.jpg";
-import imgAcolhendo3 from "../assets/img/fotos/programas/Acolhendo3.jpg";
-import imgAcolhendo4 from "../assets/img/fotos/programas/Acolhendo4.jpg";
-import imgAcolhendo5 from "../assets/img/fotos/programas/Acolhendo5.jpg";
-import imgMulheres1 from "../assets/img/fotos/programas/Mulheres.jpg";
-import imgAgrofloresta1 from "../assets/img/fotos/programas/Agrofloresta.jpg";
-import imgAgrofloresta2 from "../assets/img/fotos/programas/Agrofloresta2.jpg";
-import { BotaoDoacoes } from "../components/BotaoDoacoes";
+import acolhendo from "../assets/img/fotos/programas/Acolhendo6.jpg";
+import mulheres from "../assets/img/fotos/programas/Mulheres.jpg";
+import agroflorestal from "../assets/img/fotos/programas/Agrofloresta.jpg";
+import { Programa } from "../components/Programa";
 
 export const Programas = () => {
   return (
-    <section className="bg-radiant-orchid flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 xl:pl-[300px]">
-      <h2 className="text-white text-3xl md:text-5xl text-center font-bold mb-10">Nossos Programas</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <ProgramaComponente
-          img={img1}
-          nome="Programa Acolhendo e Convivendo"
-          texto="Acontece no contraturno da escola, oferecendo um espaço de convivência e fortalecimento de vínculos para crianças e adolescentes de 06 a 15 anos de idade."
-          imagens={[imgAcolhendo1, imgAcolhendo2, imgAcolhendo3, imgAcolhendo4, imgAcolhendo5]}
-        />
-        <ProgramaComponente
-          img={img3}
-          nome="Grupo de Mulheres Francisca Clotilde"
-          texto="Serviço de convivência e fortalecimento de vínculos para figuras femininas responsáveis pelos assistidos pelo IRL."
-          imagens={[imgMulheres1]}
-        />
-        <ProgramaComponente
-          img={img4}
-          nome="Sistema Agroflorestal - SAF"
-          texto="Com a implementação do sistema agroflorestal - SAF do IRL, busca-se o incentivo a uma vida sustentável e harmoniosa entre seres humanos e o meio ambiente."
-          imagens={[imgAgrofloresta1, imgAgrofloresta2]}
-        />
-      </div>
-      <div className="sm:hidden">
-        <BotaoDoacoes />
-      </div>
-    </section>
+    <div>
+      <Programa
+        id="acolhendo-e-convivendo"
+        bgColor={"radiant-orchid"}
+        img={acolhendo}
+        titulo="Programa Acolhendo e Convivendo"
+        paragrafos={[
+          "O Programa A&C funciona no contraturno escolar e atende crianças e adolescentes de 6 a 13 anos de idade, moradores do Bairro Ellery e adjacências, em Fortaleza/CE.",
+          "O A&C oferece um espaço de convivência e fortalecimento de vínculos para crianças e adolescentes...",
+          "No intuito de garantir segurança alimentar, o IRL também oferece duas refeições diárias, sendo almoço e lanche da tarde."
+        ]}
+      />
+      <Programa
+        id="grupo-de-mulheres-francisca-clotilde"
+        bgColor={"primary"}
+        img={mulheres}
+        titulo="Grupo de Mulheres Francisca Clotilde"
+        paragrafos={[
+          "O Grupo de mulheres Francisca Clotilde é um serviço de convivência e fortalecimento de vínculos para figuras femininas responsáveis pelas crianças e adolescentes inscritas no Programa Acolhendo e Convivendo. Os encontros são semanais e tem como objetivo ampliar o universo informacional das mulheres participantes no que se refere a sustentabilidade, a saúde e direitos da mulher, assim como estimular a autonomia financeira e a inserção no mercado de trabalho. Além disso, em parceria com o Sesc, por meio do Programa Sesc Ativo, são oferecidas aulas de dança duas vezes por semana, através de uma turma de multipráticas de dança."
+        ]}
+      />
+      <Programa
+        id="agrofloresta"
+        bgColor={"greenery"}
+        img={agroflorestal}
+        titulo="Sistema Agroflorestal - SAF"
+        paragrafos={[
+          "O sistema agroflorestal (SAF) é uma técnica de recuperação ambiental e de produção de alimentos que se inspira na dinâmica que ocorre na natureza, onde plantas de diversas espécies vivem juntas, uma ajudando a outra no seu desenvolvimento. ",
+          "Com a implementação do sistema agroflorestal do IRL, busca-se oportunizar um contato próximo das crianças e adolescentes com a natureza. No SAF são realizadas atividades educativas, e também, momentos de cultivo e plantio a fim de fomentar e promover a segurança alimentar, além do incentivo à uma vida sustentável e harmoniosa entre seres humanos e meio ambiente."
+        ]}
+      />
+    </div>
   );
 };

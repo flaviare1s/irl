@@ -3,7 +3,8 @@ import { Depoimentos } from "../components/Depoimentos"
 import { Equipe } from "../components/Equipe"
 import { Historia } from "../components/Historia"
 import { Missao } from "../components/Missao"
-import { Programas } from "./Programas"
+import { ODS } from "../components/ODS"
+import { ProgramasSection } from "../components/ProgramasSection"
 
 export const Home = () => {
   return (
@@ -11,7 +12,8 @@ export const Home = () => {
       <Banner />
       <Historia />
       <Missao />
-      <Programas />
+      <ProgramasSection />
+      <ODS />
       <Equipe />
       <Depoimentos />
     </div>

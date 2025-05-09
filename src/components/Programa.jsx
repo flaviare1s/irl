@@ -1,30 +1,18 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-
-export const Programa = ({ nome, texto, imagens, onImageLoad }) => {
+export const Programa = ({ id, img, titulo, paragrafos, bgColor }) => {
   return (
-    <div>
-      <h2 className="text-2xl font-bold text-center mb-4">{nome}</h2>
-      <p className="text-center mb-4">{texto}</p>
-
-      {/* Carrossel */}
-      <Swiper
-        modules={[Navigation, Pagination]}
-        navigation
-        pagination={{ clickable: true }}
-        className="w-full"
-      >
-        {imagens.map((img, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={img}
-              className="w-full h-auto object-contain rounded-lg"
-              alt={`Imagem ${index + 1}`}
-              onLoad={onImageLoad}
-            />
-          </SwiperSlide>
+    <section
+      id={id}
+      className={`bg-${bgColor} text-white grid grid-cols-1 md:grid-cols-2 p-10 md:px-44 md:py-20 items-center scroll-mt-20`}
+    >
+      <div className="w-[80%]">
+        <img src={img} alt="Imagem do programa" />
+      </div>
+      <div>
+        <h2 className="text-3xl md:text-5xl font-bold mb-5">{titulo}</h2>
+        {paragrafos.map((texto, index) => (
+          <p key={index} className="mb-4">{texto}</p>
         ))}
-      </Swiper>
-    </div>
+      </div>
+    </section>
   );
 };
