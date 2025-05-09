@@ -27,9 +27,7 @@ export const Sessao = ({ title, img, isRowReverse = false, children, elementoGra
           {children}
         </div>
       </div>
-      <div className="lg:ml-[-20px]">
         <BotaoDoacoes />
-      </div>
     </section>
   );
 };

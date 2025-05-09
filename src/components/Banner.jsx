@@ -2,7 +2,6 @@ import Background from '../assets/img/fotos/banner.jpg'
 import BackgroundMobile from '../assets/img/fotos/banner-mobile.jpg'
 import Pattern from '../assets/img/elementos/x.png' 
 import { Button } from './Button'
-import { Idade } from './Idade'
 
 export const Banner = () => {
   return (
@@ -14,7 +13,6 @@ export const Banner = () => {
         <h1 className='text-white text-3xl md:text-4xl lg:text-6xl font-bold w-[80%] md:w-[60%] text-center leading-[1.3] mb-14' style={{ textShadow: '0 0 5px rgba(0, 0, 0, 0.9)' }}>Instituto Dr. Rocha Lima de Proteção e Assistência à Infância</h1>
         <Button rota='/programas' text='Conheça Nossos Programas' bgColor='bg-primary' />
         <div className='absolute bottom-6 left-6 md:bottom-14 md:left-14'>
-          <Idade />
         </div>
       </div>
     </div>
