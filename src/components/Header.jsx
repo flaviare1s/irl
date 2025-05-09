@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 import Logo from "../assets/img/logo-branca.png"
 import { DesktopMenu } from "./DesktopMenu"
 import { MobileMenu } from "./MobileMenu"
-import { ModalDoacoes } from "./ModalDoacoes"
 import { useState } from "react"
+import { ModalDoacoesMobile } from "./ModalDoacoesMobile"
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ export const Header = () => {
         <div>
           <MobileMenu openModal={openModal} />
           <DesktopMenu openModal={openModal} />
-          <ModalDoacoes isOpen={isOpen} closeModal={closeModal} />
+          <ModalDoacoesMobile isOpen={isOpen} closeModal={closeModal} />
         </div>
       </nav>
     </header>

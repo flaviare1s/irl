@@ -6,6 +6,7 @@ import { Programas } from "./pages/Programas"
 import { Footer } from "./components/Footer"
 import { useEffect, useState } from "react"
 import { LoadingScreen } from "./components/LoadingScreen"
+import { BotaoDoacoesFixed } from "./components/BotaoDoacoesFixed"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +24,7 @@ function App() {
       <div className={isLoading ? "opacity-0" : "opacity-100"}>
         <BrowserRouter>
         <Header />
+        <BotaoDoacoesFixed />
           <main>
             <Routes>
               <Route path="/" element={<Home />} />

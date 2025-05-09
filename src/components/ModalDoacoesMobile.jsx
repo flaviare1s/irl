@@ -4,7 +4,7 @@ import qrcode from '../assets/img/qrcode.png';
 
 Modal.setAppElement('#root');
 
-export const ModalDoacoes = ({ isOpen, closeModal }) => {
+export const ModalDoacoesMobile = ({ isOpen, closeModal }) => {
   const [isImageLoading, setIsImageLoading] = useState(true);
 
   const handleImageLoad = () => {
