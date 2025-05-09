@@ -8,7 +8,7 @@ export const BotaoDoacoes = ({ text = 'Faça uma Doação', bgColor = 'bg-living
   const closeModal = () => setIsOpen(false)
 
   return (
-    <div className='sm:hidden'>
+    <div className='md:hidden'>
       <button
         onClick={openModal}
         className={`${bgColor} text-white font-bold w-[270px] h-[60px] rounded-full flex justify-start px-2 items-center cursor-pointer hover:brightness-120 group transition-all duration-300`}>
