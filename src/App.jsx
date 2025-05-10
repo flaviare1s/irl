@@ -3,6 +3,7 @@ import { Home } from "./pages/Home"
 import { Header } from "./components/Header"
 import { Transparencia } from "./pages/Transparencia"
 import { Programas } from "./pages/Programas"
+import { FacaParte } from "./pages/FacaParte"
 import { Footer } from "./components/Footer"
 import { useEffect, useState } from "react"
 import { LoadingScreen } from "./components/LoadingScreen"
@@ -32,6 +33,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/programas" element={<Programas />} />
               <Route path="/transparencia" element={<Transparencia />} />
+              <Route path="/participe" element={<FacaParte />} />
             </Routes>
           </main>
         <Footer />

@@ -2,13 +2,7 @@ import { Link } from "react-router-dom"
 import Logo from "../assets/img/logo-branca.png"
 import { DesktopMenu } from "./DesktopMenu"
 import { MobileMenu } from "./MobileMenu"
-import { useState } from "react"
-import { ModalDoacoesMobile } from "./ModalDoacoesMobile"
-
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
 
   return (
     <header className="bg-primary text-white flex flex-col justify-center it">
@@ -17,9 +11,8 @@ export const Header = () => {
           <Link to='/'><img className="w-full" src={Logo} alt="Logo do IRL" /></Link>
         </div>
         <div>
-          <MobileMenu openModal={openModal} />
-          <DesktopMenu openModal={openModal} />
-          <ModalDoacoesMobile isOpen={isOpen} closeModal={closeModal} />
+          <MobileMenu />
+          <DesktopMenu />
         </div>
       </nav>
     </header>

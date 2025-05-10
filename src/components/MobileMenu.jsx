@@ -1,17 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-export const MobileMenu = ({ openModal }) => {
+export const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const menuButtonRef = useRef(null);
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  const handleOpenModal = () => {
-    closeMenu();
-    openModal();
-  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -58,7 +54,7 @@ export const MobileMenu = ({ openModal }) => {
           <Link to="/" className="text-white link-nav" onClick={closeMenu}>IRL</Link>
           <Link to="/programas" className="text-white link-nav" onClick={closeMenu}>Programas</Link>
           <Link to="/transparencia" className="text-white link-nav" onClick={closeMenu}>Transparência</Link>
-          <button onClick={handleOpenModal} className="text-white link-nav cursor-pointer">Faça parte</button>
+          <Link to="/participe" className="text-white link-nav cursor-pointer" onClick={closeMenu}>Faça parte</Link>
         </div>
       </div>
     </div>
