@@ -58,7 +58,7 @@ export const MobileMenu = ({ openModal }) => {
           <Link to="/" className="text-white link-nav" onClick={closeMenu}>IRL</Link>
           <Link to="/programas" className="text-white link-nav" onClick={closeMenu}>Programas</Link>
           <Link to="/transparencia" className="text-white link-nav" onClick={closeMenu}>Transparência</Link>
-          <button onClick={handleOpenModal} className="text-white link-nav cursor-pointer">Faça Uma Doação</button>
+          <button onClick={handleOpenModal} className="text-white link-nav cursor-pointer">Faça parte</button>
         </div>
       </div>
     </div>

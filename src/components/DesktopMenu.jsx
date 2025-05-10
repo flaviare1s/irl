@@ -5,7 +5,7 @@ export const DesktopMenu = ({ openModal }) => {
     <div className="hidden gap-7 sm:flex md:text-lg font-bold">
       <Link className="link-nav" to='/programas'>Programas</Link>
       <Link className="link-nav" to='/transparencia'>Transparência</Link>
-      <button className="link-nav" to='/doacoes' onClick={openModal}>Faça uma doação</button>
+      <button className="link-nav" to='/doacoes' onClick={openModal}>Faça parte</button>
     </div>
   )
 }
