@@ -11,16 +11,19 @@ export const ProgramasSection = () => {
       <h2 className="text-white text-3xl md:text-5xl text-center font-bold mb-10">Nossos Programas</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <ProgramaComponente
+          id="acolhendo-e-convivendo"
           img={img1}
           nome="Programa Acolhendo e Convivendo"
           texto="Acontece no contraturno da escola, oferecendo um espaço de convivência e fortalecimento de vínculos para crianças e adolescentes de 06 a 15 anos de idade."
         />
         <ProgramaComponente
+          id="grupo-de-mulheres-francisca-clotilde"
           img={img3}
           nome="Grupo de Mulheres Francisca Clotilde"
           texto="Serviço de convivência e fortalecimento de vínculos para figuras femininas responsáveis pelos assistidos pelo IRL."
         />
         <ProgramaComponente
+          id="agrofloresta"
           img={img4}
           nome="Sistema Agroflorestal - SAF"
           texto="Com a implementação do sistema agroflorestal - SAF do IRL, busca-se o incentivo a uma vida sustentável e harmoniosa entre seres humanos e o meio ambiente."

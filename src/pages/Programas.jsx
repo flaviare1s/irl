@@ -1,3 +1,7 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { LoadingScreen } from "../components/LoadingScreen";
+import { Programa } from "../components/Programa";
 import acolhendo from "../assets/img/fotos/programas/Acolhendo6.jpg";
 import mulheres from "../assets/img/fotos/programas/Mulheres.jpg";
 import agroflorestal from "../assets/img/fotos/programas/Agrofloresta.jpg";
@@ -6,32 +10,33 @@ import elementoGrafico2 from "../assets/img/elementos/elemento-azul2.png";
 import elementoGrafico3 from "../assets/img/elementos/elemento-rosa3.png";
 import elementoGrafico4 from "../assets/img/elementos/x.png";
 
-import { Programa } from "../components/Programa";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
 export const Programas = () => {
   const location = useLocation();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const scrollId = location.state?.scrollTo;
-    if (scrollId) {
-      const timeout = setTimeout(() => {
-        requestAnimationFrame(() => {
-          const element = document.getElementById(scrollId);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
-            window.history.replaceState({}, document.title);
-          }
-        });
-      }, 300);
-
-      return () => clearTimeout(timeout);
+    if (!isLoading) {
+      const scrollId = location.state?.scrollTo;
+      if (scrollId) {
+        const element = document.getElementById(scrollId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     }
-  }, [location]);
+  }, [isLoading, location]);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div>
+      {isLoading && <LoadingScreen />}
       <Programa
         id="acolhendo-e-convivendo"
         bgColor={"radiant-orchid"}

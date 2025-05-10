@@ -18,6 +18,7 @@ export const ProgramaComponente = ({ img, nome, texto, id }) => {
       <button
         onClick={handleClick}
         className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-primary flex justify-center items-center text-white text-2xl md:text-3xl font-bold mt-5 cursor-pointer"
+        aria-label={`Ir para o programa ${nome}`}
       >
         +
       </button>

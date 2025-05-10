@@ -5,7 +5,7 @@ export const ScrollToTop = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash && !location.state?.scrollTo) {
+    if (!location.state?.scrollTo) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
