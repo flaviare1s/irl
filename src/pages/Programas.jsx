@@ -7,39 +7,31 @@ import elementoGrafico3 from "../assets/img/elementos/elemento-rosa3.png";
 import elementoGrafico4 from "../assets/img/elementos/x.png";
 
 import { Programa } from "../components/Programa";
-import { LoadingScreen } from "../components/LoadingScreen";
-import { useState } from "react";
-
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export const Programas = () => {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
-      const element = document.getElementById(id);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100);
-      }
+    const scrollId = location.state?.scrollTo;
+    if (scrollId) {
+      const timeout = setTimeout(() => {
+        requestAnimationFrame(() => {
+          const element = document.getElementById(scrollId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+            window.history.replaceState({}, document.title);
+          }
+        });
+      }, 300);
+
+      return () => clearTimeout(timeout);
     }
   }, [location]);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <div>
-      {isLoading && <LoadingScreen />}
       <Programa
         id="acolhendo-e-convivendo"
         bgColor={"radiant-orchid"}
