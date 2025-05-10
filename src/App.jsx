@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer"
 import { useEffect, useState } from "react"
 import { LoadingScreen } from "./components/LoadingScreen"
 import { BotaoDoacoesFixed } from "./components/BotaoDoacoesFixed"
+import { ScrollToTop } from "./components/ScrollToTop"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +24,7 @@ function App() {
       {isLoading && <LoadingScreen />}
       <div className={isLoading ? "opacity-0" : "opacity-100"}>
         <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <BotaoDoacoesFixed />
           <main>

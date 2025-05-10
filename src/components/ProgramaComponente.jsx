@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const ProgramaComponente = ({ img, nome, texto, id }) => {
   return (
@@ -9,12 +9,12 @@ export const ProgramaComponente = ({ img, nome, texto, id }) => {
         <p className="text-lg font-medium text-center text-white">{texto}</p>
       </div>
 
-      <Link
+      <HashLink
         to={`/programas#${id}`}
         className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-primary flex justify-center items-center text-white text-2xl md:text-3xl font-bold mt-5 cursor-pointer"
       >
         +
-      </Link>
+      </HashLink>
     </section>
   );
 };
