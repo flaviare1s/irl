@@ -36,7 +36,7 @@ export const Contato = () => {
 
       <button
         type="submit"
-        className="bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-white hover:text-primary border border-primary transition-colors"
+        className="bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-white hover:text-primary border border-primary transition-colors w-full cursor-pointer"
       >
         Enviar
       </button>
