@@ -6,7 +6,7 @@ export const BotaoDoacoesFixed = ({ text = 'Faça uma Doação', bgColor = 'bg-l
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='fixed hidden md:block right-[1px] top-1/2 z-50'>
+    <div className='fixed hidden lg:block right-[1px] top-1/2 z-50'>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`${bgColor} text-white font-bold w-[276px] h-[60px] rounded-full flex justify-start px-2 items-center rotate-90 cursor-pointer hover:brightness-120 group transition-all duration-300`}
