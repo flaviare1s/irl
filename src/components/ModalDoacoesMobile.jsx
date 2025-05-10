@@ -17,7 +17,7 @@ export const ModalDoacoesMobile = ({ isOpen, closeModal }) => {
       onRequestClose={closeModal}
       contentLabel="Modal de Doações"
       className="bg-radiant-orchid py-4 rounded-lg shadow-xl w-[95%] max-w-md mx-auto font-nunito"
-      overlayClassName="fixed inset-0 flex justify-center items-center"
+      overlayClassName="fixed inset-0 flex justify-center items-center z-50"
       style={{
         overlay: {
           backgroundColor: 'rgba(0, 0, 0, 0.8)',
