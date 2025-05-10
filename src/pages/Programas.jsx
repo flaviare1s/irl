@@ -4,7 +4,7 @@ import { LoadingScreen } from "../components/LoadingScreen";
 import { Programa } from "../components/Programa";
 import acolhendo from "../assets/img/fotos/programas/Acolhendo.jpg";
 import mulheres from "../assets/img/fotos/programas/Mulheres.jpg";
-import agroflorestal from "../assets/img/fotos/programas/Agrofloresta.png";
+import agroflorestal from "../assets/img/fotos/programas/Agrofloresta.jpg";
 import elementoGrafico1 from "../assets/img/elementos/elemento-verde2.png";
 import elementoGrafico2 from "../assets/img/elementos/elemento-azul2.png";
 import elementoGrafico3 from "../assets/img/elementos/elemento-rosa3.png";
