@@ -2,7 +2,7 @@ export const Programa = ({ id, img, titulo, paragrafos, bgColor, color, isRevers
   return (
       <section
         id={id}
-        className={`bg-${bgColor} text-${color} flex flex-col ${isReverse ? 'md:flex-row-reverse' : 'md:flex-row'} justify-center gap-10 p-10 md:px-44 md:py-20 items-center scroll-mt-20 relative`}
+        className={`bg-${bgColor} text-${color} flex flex-col ${isReverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} justify-center gap-10 p-10 md:px-44 md:py-20 items-center scroll-mt-20 relative`}
       >
       <div className="hidden md:block absolute top-10 left-5">
         <img className="h-20 md:h-32" src={elementoGrafico1} />
