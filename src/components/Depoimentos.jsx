@@ -85,9 +85,9 @@ export const Depoimentos = () => {
           </SwiperSlide>
         </Swiper>
 
-        <div className="mt-10">
+        {/* <div className="mt-10">
           <BotaoDoacoes bgColor="bg-greenery" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
