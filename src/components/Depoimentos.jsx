@@ -7,42 +7,46 @@ import clausonSales from "../assets/img/fotos/clauson_sales.jpg";
 import adrianMelo from "../assets/img/fotos/adrian_melo.jpg";
 import mariaHorteneuza from "../assets/img/fotos/maria_horteneuza.jpg";
 
+// Importações do Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export const Depoimentos = () => {
   return (
     <div className="bg-living-coral flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 lg:pr-[250px]">
       <div className="flex justify-center items-center gap-3 mb-10">
-        <img className="w-10" src={pattern} />
+        <img className="w-10" src={pattern} alt="elemento decorativo" />
         <h2 className="text-white text-3xl md:text-5xl text-center font-bold">
           O que dizem sobre nós
         </h2>
       </div>
+
       <div className="flex flex-col lg:flex-row justify-center items-center w-full">
         <Swiper
+          modules={[Pagination, Navigation]}
           spaceBetween={30}
           slidesPerView={1}
           loop={true}
           pagination={{
             clickable: true,
-            type: "fraction",  
+            type: "fraction",
           }}
+          navigation={true}
           breakpoints={{
             640: {
               slidesPerView: 1,
             },
-            768: {
+            900: {
               slidesPerView: 2,
-              spaceBetween: 30,
             },
-            1300: {
+            1360: {
               slidesPerView: 3,
-              spaceBetween: 30,
             },
           }}
-          className="w-full"  
+          className="w-full"
         >
           <SwiperSlide>
             <Depoimento

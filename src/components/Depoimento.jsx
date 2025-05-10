@@ -1,6 +1,6 @@
 export const Depoimento = ({ depoimento, foto, nome, relacao }) => {
   return (
-    <section className="flex flex-col items-center justify-center p-8 lg:p-4 bg-white rounded-md h-[500px]">
+    <section className="flex flex-col items-center justify-center py-8 px-10 lg:px-12 bg-white rounded-md h-[530px]">
       <div className="flex-grow flex flex-col items-center justify-center">
         <p className="text-base font-medium text-center">{depoimento}</p>
       </div>
