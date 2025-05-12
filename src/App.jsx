@@ -9,6 +9,9 @@ import { useEffect, useState } from "react"
 import { LoadingScreen } from "./components/LoadingScreen"
 import { BotaoDoacoesFixed } from "./components/BotaoDoacoesFixed"
 import { ScrollToTop } from "./components/ScrollToTop"
+import { Obrigado } from "./pages/Obrigado"
+import { NotFound } from "./pages/NotFound"
+import { Toaster } from "react-hot-toast"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,11 +37,14 @@ function App() {
               <Route path="/programas" element={<Programas />} />
               <Route path="/transparencia" element={<Transparencia />} />
               <Route path="/participe" element={<FacaParte />} />
+              <Route path="/obrigado" element={<Obrigado />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
         <Footer />
         </BrowserRouter>
       </div>
+      <Toaster position="top-center" />
     </div>
   )
 }
