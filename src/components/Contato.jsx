@@ -1,20 +1,31 @@
-import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
+import emailjs from 'emailjs-com';
+import { useNavigate } from "react-router-dom";
 
 export const Contato = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async (data) => {
-    console.log("onSubmit chamado");
-    console.log("Dados capturados: ", data);
+    console.log("Formulário enviado:", data);
+
     try {
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        data,
+        import.meta.env.VITE_EMAILJS_USER_ID
+      );      
+
+      console.log('Resultado do envio:', result);
       toast.success("Mensagem enviada com sucesso!");
-      navigate("/obrigado"); 
+
+      navigate("/obrigado");
+
     } catch (error) {
-      console.error("Erro no envio", error);
-      toast.error("Ocorreu um erro ao enviar. Tente novamente.");
+      console.error('Erro ao enviar o e-mail:', error);
+      toast.error("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
     }
   };
 

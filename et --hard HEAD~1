@@ -1,0 +1,278 @@
+[33mcommit 901b347322a8722afcc35a0affa98d561851d143[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Mon May 12 15:04:24 2025 -0300
+
+    Configura email js
+
+[33mcommit 2d2edfd9ca29d0ae8493138a419c34a190bce195[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Mon May 12 07:32:41 2025 -0300
+
+    Ajusta formulário
+
+[33mcommit 30d9fce787be738c13a48110fedc1bd3bb4be278[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Mon May 12 07:27:09 2025 -0300
+
+    Ajusta form
+
+[33mcommit f7c8abc2baad79ab8f82cd5f7c45230ef487582b[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Mon May 12 07:17:39 2025 -0300
+
+    Adiciona react hook form, rect hot toast e página de not found
+
+[33mcommit f3af4e55021fd7836def97adcabe74d29e6c74e5[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sun May 11 17:30:00 2025 -0300
+
+    Ajusta número de whatsapp
+
+[33mcommit b2475d1251d30e7a84c821f5a1af049d9a9c29dd[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sun May 11 17:16:51 2025 -0300
+
+    Ajusta página de doações
+
+[33mcommit 9870dea8a952c36f39c0db952b1d0f7e087c666a[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sun May 11 16:52:31 2025 -0300
+
+    Ajusta parágrafos
+
+[33mcommit 56286406a2a13648760111dc501835c0898f504f[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sun May 11 16:50:31 2025 -0300
+
+    Ajusta texto dos programas
+
+[33mcommit 90b49b3c20993fe0c6a798d3be926f00c805cc13[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 15:32:10 2025 -0300
+
+    Ajusta imagem
+
+[33mcommit d45c6b62e79801e216942bef16203e00a8d0457d[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 15:27:04 2025 -0300
+
+    Adiciona botão de whatsapp
+
+[33mcommit 8888585d8f2c649d4b81d52bbdd936ab30aaaeb0[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 15:23:33 2025 -0300
+
+    Ajusta estilo
+
+[33mcommit bb6e292771da1811f8805801297b44b4830d2f38[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 15:23:00 2025 -0300
+
+    Ajusta form
+
+[33mcommit 30dee50b8a7e8b899279d65a87c77d78fa4880a4[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 15:19:44 2025 -0300
+
+    Adiciona elemento gráfico para estilizar
+
+[33mcommit 9fd35d974a15663f67808838171d7ec773595dce[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 15:15:36 2025 -0300
+
+    Adiciona página de faça parte
+
+[33mcommit 99c1b05af019a9458fae0c1487b1e91fb8bc4aa7[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 14:54:43 2025 -0300
+
+    Ajusta footer
+
+[33mcommit db66d3724d03740095696359c08dc6af3f0ad96e[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 14:00:25 2025 -0300
+
+    Altera fotos
+
+[33mcommit 6be09d30b4246dea134224b014f55463a1c8bcfa[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 13:52:00 2025 -0300
+
+    Ajusta z index do modal
+
+[33mcommit 7b3935051b547e78873bf378e605f727e85bc1bc[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 10:12:39 2025 -0300
+
+    Oculta temporariamente botão de doações na seção de depoimentos
+
+[33mcommit 4abeb176f0fe8788ced3c75aa07fcaebbda04141[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 10:09:21 2025 -0300
+
+    Ajusta paginação
+
+[33mcommit d597e0e92d82b0f4371df33061e2010b3cc83ea4[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 10:00:11 2025 -0300
+
+    Ajusta depoimentos
+
+[33mcommit a636a2948ca300bfc9910a18116e77b05cf6bb96[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 09:22:59 2025 -0300
+
+    Ajusta ids dos programas
+
+[33mcommit dc6fdf25036e28bcf0e82e2ea5932c3966f98bb4[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 09:09:37 2025 -0300
+
+    Ajusta scroll to top
+
+[33mcommit 88b8709c136ce1c366e7b087638b3181d34b63fc[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 08:53:46 2025 -0300
+
+    Corrige erro
+
+[33mcommit aae2125f01c6c3dc93c8fb3a5e3979b07650c31a[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 08:49:41 2025 -0300
+
+    Ajusta scroll
+
+[33mcommit 7df61bd219c8f4b0f038c725785d7bd611c7e589[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 08:38:28 2025 -0300
+
+    Ajusta responsividade de números
+
+[33mcommit bff17ee056c972a17a761a725822adb780ef412d[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 08:35:15 2025 -0300
+
+    Ajusta responsividade
+
+[33mcommit 48b0bbfdc1944edf7703d062dc604ce9480ac148[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat May 10 08:32:52 2025 -0300
+
+    Ajusta página de programas
+
+[33mcommit f330e8ff4fb1221abd6ae7a82d51b4d368b57663[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Fri May 9 21:05:58 2025 -0300
+
+    Desenvolvimento em andamento
+
+[33mcommit f23cd31aa200f4e9c560bb9ac8d2821af6858a12[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Fri May 9 20:43:12 2025 -0300
+
+    Adiciona página programas
+
+[33mcommit af3ac4e64255cb9da155a5ace6b1cd74e4c14091[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Fri May 9 19:23:57 2025 -0300
+
+    Retira projeto da biblioteca e adiciona programas à home
+
+[33mcommit c7e155b9c8e35a63c9d28d9e26f85d9421baeefb[m
+Merge: 5b997f6 3cc82c4
+Author: Flávia Reis <flaviarster@gmail.com>
+Date:   Fri May 9 19:06:05 2025 -0300
+
+    Merge pull request #1 from flaviare1s/develop
+    
+    Develop
+
+[33mcommit 3cc82c4c8d2efc828826b51e5e555c42d557f175[m[33m ([m[1;31morigin/feat/versao2[m[33m, [m[1;31morigin/develop[m[33m, [m[1;32mfeat/versao2[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Fri May 9 19:02:54 2025 -0300
+
+    Ajusta botão de doações em telas grandes
+
+[33mcommit d4ea78b2aa97224c0f1519a3089fe987b5db0fa0[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Fri May 9 18:40:54 2025 -0300
+
+    Corrige erro de carregamento de imagem
+
+[33mcommit 61a39525f9532a1e8e50cfb6128e6266b15dbd0e[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Fri May 9 18:33:04 2025 -0300
+
+    Cria dotão de doação fixo e drawer
+
+[33mcommit 5b997f6f7c04e34cae4b222ba29bc116de8ba134[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sun Apr 13 08:47:06 2025 -0300
+
+    Ajusta o footer
+
+[33mcommit 5f3fe9a35186124f8762a3eeff527d1ddd3dea3f[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sun Apr 13 08:35:55 2025 -0300
+
+    Ajusta tamanho do header
+
+[33mcommit b27fbc716b91595a7f5107c3dc98ed07a490be5c[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat Apr 12 11:34:06 2025 -0300
+
+    Adiciona estilo de hover no botão de doações
+
+[33mcommit 6a7db4d5cf885fb59a89b244f4ca8ee046bfbe3e[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat Apr 12 11:10:53 2025 -0300
+
+    Adiciona estilo no hover dos links
+
+[33mcommit 6709346a101a09d34b8b9b149b637ece6062d4e5[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat Apr 12 08:51:29 2025 -0300
+
+    corrige erro de digitação
+
+[33mcommit 808e4f60175e56fe9f7b294e6af6796ec4467bfa[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Sat Apr 12 08:47:29 2025 -0300
+
+    Adiciona metatags
+
+[33mcommit d666ee7c692050e43fc9083c0595a2d7c481e218[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Fri Mar 28 16:08:43 2025 -0300
+
+    Altera cor do texto
+
+[33mcommit af119ad5a367d175f6a9f5ee3dee2c47744e1f35[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Thu Mar 27 09:57:44 2025 -0300
+
+    Ajusta estilo do footer
+
+[33mcommit c193a04245e560cf70396c0546d922e443b58e8a[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Wed Mar 26 21:46:03 2025 -0300
+
+    Ajusta opacidade do overlay
+
+[33mcommit 1d444720c4a8d7444228708fbee351ebeed3e2f1[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Wed Mar 26 21:44:10 2025 -0300
+
+    Ajusta botão 'Faça Parte'
+
+[33mcommit 0fe4b502d6d17f706db6ec4b21536f200b598cbd[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Wed Mar 26 21:41:45 2025 -0300
+
+    Adiciona botão de doações
+
+[33mcommit fecd1331ec1111cc5795509c0e9143d297a6a40c[m
+Author: flaviare1s <flaviarster@gmail.com>
+Date:   Wed Mar 26 20:50:45 2025 -0300
+
+    Altera ícones da p�
