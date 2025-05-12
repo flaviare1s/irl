@@ -5,21 +5,19 @@ import { toast } from 'react-hot-toast';
 export const Contato = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = async (data) => {
-    try {
-      console.log(data);
-      toast.success("Mensagem enviada com sucesso!");
-      window.location.href = "/obrigado";
-    } catch (error) {
-      console.error("Erro no envio", error);
-      toast.error("Ocorreu um erro ao enviar. Tente novamente.");
-    }
+  const onSubmit = (data) => {
+    console.log(data);
+    toast.success("Mensagem enviada com sucesso!");
+  };
+
+  const onError = (errors) => {
+    console.log("Erro de validação", errors);
   };
 
   return (
     <form
       className="w-full md:w-1/2 mx-auto p-6 bg-white rounded-lg shadow-md space-y-4"
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmit, onError)}
     >
       <h2 className="text-2xl font-bold text-primary">Entre em contato</h2>
       <p className="text-gray-600">Ou mande sua mensagem pela caixa abaixo</p>
