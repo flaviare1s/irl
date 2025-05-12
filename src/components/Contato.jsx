@@ -1,13 +1,21 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { toast } from 'react-hot-toast';
+import { toast } from "react-hot-toast";
 
 export const Contato = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    toast.success("Mensagem enviada com sucesso!");
+  const onSubmit = async (data) => {
+    console.log("onSubmit chamado");
+    console.log("Dados capturados: ", data);
+    try {
+      toast.success("Mensagem enviada com sucesso!");
+      navigate("/obrigado"); 
+    } catch (error) {
+      console.error("Erro no envio", error);
+      toast.error("Ocorreu um erro ao enviar. Tente novamente.");
+    }
   };
 
   const onError = (errors) => {
