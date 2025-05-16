@@ -23,7 +23,6 @@ export const Numero = ({ textColor, numero, descricao }) => {
     return () => clearInterval(timer);
   }, [numero]);
 
-  // Formatação com ponto como separador de milhar
   const formattedCount = count.toLocaleString('en-US').replace(/,/g, '.');
 
   return (

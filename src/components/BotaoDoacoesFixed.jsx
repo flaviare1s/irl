@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import { ModalDoacoesDrawer } from './ModalDoacoesDrawer';
 
-export const BotaoDoacoesFixed = ({ text = 'Faça uma Doação', bgColor = 'bg-living-coral' }) => {
+export const BotaoDoacoesFixed = ({ bgColor = 'bg-living-coral' }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ export const BotaoDoacoesFixed = ({ text = 'Faça uma Doação', bgColor = 'bg-l
         <div className="bg-radiant-orchid h-[50px] w-[50px] rounded-full flex justify-center items-center mr-8">
           <FaHeart className="text-2xl text-freesia" />
         </div>
-        {text}
+        Faça Parte Do IRL
       </button>
       <ModalDoacoesDrawer isOpen={isOpen} />
     </div>

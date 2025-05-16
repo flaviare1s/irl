@@ -13,7 +13,7 @@ export const Sessao = ({ title, img, isRowReverse = false, children, elementoGra
       <div className={`flex flex-col lg:flex-row items-center justify-center gap-10 mb-10 ${isRowReverse ? "lg:flex-row-reverse" : ""}`}>
         <div className="w-full lg:w-1/2 py-10 flex justify-center">
           {isVideo ? (
-            <video src={img} alt={descricao} className="rounded-lg w-full max-w-[700px]" controls />
+            <video src={img} alt={descricao} className="rounded-lg w-full max-w-[400px]" controls />
           ) : (
             <img src={img} alt={descricao} className="rounded-lg w-full max-w-[500px] object-cover" />
           )}
