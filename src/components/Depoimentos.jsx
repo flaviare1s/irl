@@ -51,7 +51,7 @@ export const Depoimentos = () => {
           <SwiperSlide>
             <Depoimento
               depoimento='"Aprendi a trabalhar em grupo e que ninguém faz nada só. Conheci o Grupo de Mulheres Francisca Clotilde através de uma amiga, e foi uma das melhores coisas que aconteceu na minha vida, pois estava passando por momentos difíceis e depressivos. Só tenho a agradecer ao IRL e ao grupo de mulheres."'
-              nome="Maria Horteneuza de Oliveira Rodrigues"
+              nome="Maria Horteneuza de Oliveira"
               foto={mariaHorteneuza}
               relacao="Grupo de Mulheres Francisca Clotilde"
             />
@@ -60,7 +60,7 @@ export const Depoimentos = () => {
           <SwiperSlide>
             <Depoimento
               depoimento='"Contribuo de forma voluntária no IRL desde 2015. Inicialmente prestei serviço de automação do abastecimento de água da sede, projetando e instalando o sistema. Continuo sempre visitando o IRL e me voluntariando para resolver problemas referentes à infraestrutura. Nesse tempo de trabalho voluntário, um dos aprendizados que tive foi perceber como é importante fazer algo para ajudar a melhorar a vida dos outros."'
-              nome="Clausson Sales do Nascimento Rios"
+              nome="Clausson Sales"
               foto={clausonSales}
               relacao="Voluntário"
             />
@@ -69,7 +69,7 @@ export const Depoimentos = () => {
           <SwiperSlide>
             <Depoimento
               depoimento='"Sempre fui fã do trabalho desenvolvido pelo IRL, mas me envolvi de forma mais ativa no início da pandemia, quando eu e minha rede de apoio conseguimos um bom volume de doações. Eu admiro muito o IRL pelo lindo trabalho que eles desenvolvem com as crianças, sempre com cuidado e amor, não só pelas crianças, mas também pelas famílias. Isso também serve de inspiração para mim como mãe, na criação dos meus filhos, pois quero que sejam homens bons e que sempre olhem para o próximo também com cuidado."'
-              nome="Neuza Cysne Queiroz Ferreira Gomes"
+              nome="Neuza Cysne"
               foto={neuzaCysne}
               relacao="Parceira"
             />
