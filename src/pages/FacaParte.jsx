@@ -1,7 +1,5 @@
 import { Contato } from "../components/Contato";
-import { BotaoDoacoes } from "../components/BotaoDoacoes";
 import elementoGrafico from "../assets/img/elementos/x.png";
-import { BotaoWhatsapp } from "../components/BotaoWhatsapp";
 import { DadosBancarios } from "../components/DadosBancarios";
 
 export const FacaParte = () => {
@@ -26,7 +24,6 @@ export const FacaParte = () => {
         <Contato />
       </section>
       <DadosBancarios />
-      <BotaoWhatsapp />
     </div>
   );
 };

@@ -12,6 +12,8 @@ import { ScrollToTop } from "./components/ScrollToTop"
 import { Obrigado } from "./pages/Obrigado"
 import { NotFound } from "./pages/NotFound"
 import { Toaster } from "react-hot-toast"
+import { BotaoWhatsapp } from "./components/BotaoWhatsapp"
+import { BotaoWhatsappDesktop } from "./components/BotaoWhatsappDesktop"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +44,8 @@ function App() {
             </Routes>
           </main>
         <Footer />
+        <BotaoWhatsapp />
+        <BotaoWhatsappDesktop />
         </BrowserRouter>
       </div>
       <Toaster position="top-center" />
