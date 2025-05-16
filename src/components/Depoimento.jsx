@@ -9,8 +9,8 @@ export const Depoimento = ({ depoimento, foto, nome, relacao }) => {
           <img className="w-full h-full object-cover" src={foto} alt={nome} />
         </div>
         <div className="flex flex-col">
-          <h3 className="font-bold">{nome}</h3>
-          <p className="text-sm">{relacao}</p>
+          <h3 className="font-bold text-sm">{nome}</h3>
+          <p className="text-xs">{relacao}</p>
         </div>
       </div>
     </section>
