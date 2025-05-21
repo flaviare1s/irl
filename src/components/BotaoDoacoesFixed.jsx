@@ -6,7 +6,7 @@ export const BotaoDoacoesFixed = ({ bgColor = 'bg-living-coral' }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='fixed hidden lg:block right-[1px] top-1/2 z-50'>
+    <div>
       <div>
         <button
           onClick={() => setIsOpen(!isOpen)}

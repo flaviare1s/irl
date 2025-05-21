@@ -1,19 +1,18 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Home } from "./pages/Home"
-import { Header } from "./components/Header"
-import { Transparencia } from "./pages/Transparencia"
-import { Programas } from "./pages/Programas"
-import { FacaParte } from "./pages/FacaParte"
-import { Footer } from "./components/Footer"
-import { useEffect, useState } from "react"
-import { LoadingScreen } from "./components/LoadingScreen"
-import { BotaoDoacoesFixed } from "./components/BotaoDoacoesFixed"
-import { ScrollToTop } from "./components/ScrollToTop"
-import { Obrigado } from "./pages/Obrigado"
-import { NotFound } from "./pages/NotFound"
-import { Toaster } from "react-hot-toast"
-import { BotaoWhatsapp } from "./components/BotaoWhatsapp"
-import { BotaoWhatsappDesktop } from "./components/BotaoWhatsappDesktop"
+import { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BotaoWhatsapp } from "./components/BotaoWhatsapp";
+import { DoacoesContainer } from "./components/DoacoesContainer";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { LoadingScreen } from "./components/LoadingScreen";
+import { ScrollToTop } from "./components/ScrollToTop";
+import { FacaParte } from "./pages/FacaParte";
+import { Home } from "./pages/Home";
+import { NotFound } from "./pages/NotFound";
+import { Obrigado } from "./pages/Obrigado";
+import { Programas } from "./pages/Programas";
+import { Transparencia } from "./pages/Transparencia";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,9 +29,9 @@ function App() {
       {isLoading && <LoadingScreen />}
       <div className={isLoading ? "opacity-0" : "opacity-100"}>
         <BrowserRouter>
-        <ScrollToTop />
-        <Header />
-        <BotaoDoacoesFixed />
+          <ScrollToTop />
+          <Header />
+          <DoacoesContainer />
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -43,14 +42,13 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-        <Footer />
-        <BotaoWhatsapp />
-        <BotaoWhatsappDesktop />
+          <Footer />
+          <BotaoWhatsapp />
         </BrowserRouter>
       </div>
       <Toaster position="top-center" />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
