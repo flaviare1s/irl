@@ -4,7 +4,7 @@ import { Numero } from "./Numero";
 
 export const Numeros = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-10 px-4 md:px-10 bg-gray-50">
+    <div className="flex flex-col justify-center items-center py-10 px-4 md:px-10 bg-white">
       <div className="flex justify-center items-center gap-1 sm:gap-3 mb-10">
         <img className="w-10" src={pattern} />
         <h2 className="text-2xl sm:text-3xl md:text-5xl text-center font-bold">
