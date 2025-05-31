@@ -11,9 +11,9 @@ import { Parceiros } from "./Parceiros";
 
 export const Footer = () => {
   return (
-    <footer className="text-sm font-bold md:text-base flex flex-col justify-center py-5">
+    <footer className="text-sm font-bold md:text-base flex flex-col justify-center pb-5">
       <Parceiros />
-      <div className="flex justify-center items-center gap-5 pb-3">
+      <div className="flex justify-center items-center gap-5 py-3">
         <div className="flex flex-col justify-center items-center w-[50%]">
           <div className="h-[80px] w-[120px] md:h-[100px] md:w-[120px] flex justify-center items-center">
             <img className="w-full" src={Logo} alt="Logo do IRL" />
