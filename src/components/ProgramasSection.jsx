@@ -7,9 +7,9 @@ import { BotaoDoacoes } from "./BotaoDoacoes";
 
 export const ProgramasSection = () => {
   return (
-    <section className="bg-radiant-orchid flex flex-col justify-center items-center py-10 px-4 md:pl-20">
+    <section className="bg-radiant-orchid flex flex-col justify-center items-center py-10 px-4">
       <h2 className="text-white text-3xl md:text-5xl text-center font-bold mb-10">Nossos Programas</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:pl-[10px] lg:pl-[100px] xl:pl-[200px] xxl:pl-[300px]">
         <ProgramaComponente
           id="acolhendo-e-convivendo"
           img={img1}
