@@ -13,9 +13,9 @@ export const Certificados = () => {
       </div>
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:min-h-[400px]">
-          <Certificado bgColor="bg-freesia" nome="CMAs" />
           <Certificado bgColor="bg-living-coral" nome="Utilidade Publica Municipal" />
-          <Certificado bgColor="bg-radiant-orchid" nome="Utilidade Publica Municipal" />
+          <Certificado bgColor="bg-freesia" nome="CMAs" />
+          <Certificado bgColor="bg-radiant-orchid" nome="Utilidade Publica Estadual" />
           <Certificado bgColor="bg-greenery" nome="CEBAS" />
         </div>
         <div className="mt-10">
