@@ -14,7 +14,7 @@ export const DadosBancarios = () => {
           </div>
           <div className="space-y-1">
             <h3 className="text-xl font-semibold">Bradesco</h3>
-            <p>Agência: 0602</p>
+            <p>Agência: 0682</p>
             <p>Conta Corrente: 0011014-0</p>
             <p>CNPJ: 07.264.138/0001-47</p>
           </div>
