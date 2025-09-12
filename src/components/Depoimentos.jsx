@@ -60,7 +60,7 @@ export const Depoimentos = () => {
           <SwiperSlide>
             <Depoimento
               depoimento='"Contribuo de forma voluntária no IRL desde 2015. Inicialmente prestei serviço de automação do abastecimento de água da sede, projetando e instalando o sistema. Continuo sempre visitando o IRL e me voluntariando para resolver problemas referentes à infraestrutura. Nesse tempo de trabalho voluntário, um dos aprendizados que tive foi perceber como é importante fazer algo para ajudar a melhorar a vida dos outros."'
-              nome="Clausson Sales"
+              nome="Clauson Sales"
               foto={clausonSales}
               relacao="Voluntário"
             />
