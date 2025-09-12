@@ -4,6 +4,7 @@ import ods4 from "../assets/img/ods/ods4.jpg";
 import ods5 from "../assets/img/ods/ods5.jpg";
 import ods10 from "../assets/img/ods/ods10.jpg";
 import ods11 from "../assets/img/ods/ods11.jpg";
+import ods12 from "../assets/img/ods/ods12.jpg";
 import ods16 from "../assets/img/ods/ods16.jpg";
 import background from "../assets/img/fotos/programas/Acolhendo.jpg"
 
@@ -33,25 +34,28 @@ export const ODS = () => {
         </div>
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
           <div>
-            <img src={ods1} alt="ODS 1 - Erradicação da pobreza" />
+            <img className="w-full" src={ods1} alt="ODS 1 - Erradicação da pobreza" />
           </div>
           <div>
-            <img src={ods2} alt="ODS 2 - Fome zero e agricultura sustentável" />
+            <img className="w-full" src={ods2} alt="ODS 2 - Fome zero e agricultura sustentável" />
           </div>
           <div>
-            <img src={ods4} alt="ODS 4 - Educação de qualidade" />
+            <img className="w-full" src={ods4} alt="ODS 4 - Educação de qualidade" />
           </div>
           <div>
-            <img src={ods5} alt="ODS 5 - Igualdade de gênero" />
+            <img className="w-full" src={ods5} alt="ODS 5 - Igualdade de gênero" />
           </div>
           <div>
-            <img src={ods10} alt="ODS 10 - Redução das desigualdades" />
+            <img className="w-full" src={ods10} alt="ODS 10 - Redução das desigualdades" />
           </div>
           <div>
-            <img src={ods11} alt="ODS 11 - Cidades e comunidades sustentáveis" />
+            <img className="w-full" src={ods11} alt="ODS 11 - Cidades e comunidades sustentáveis" />
           </div>
           <div>
-            <img src={ods16} alt="ODS 16 - Paz, justiça e instituções eficazes" />
+            <img className="w-full" src={ods12} alt="ODS 11 - Cidades e comunidades sustentáveis" />
+          </div>
+          <div>
+            <img className="w-full" src={ods16} alt="ODS 16 - Paz, justiça e instituções eficazes" />
           </div>
         </div>
       </div>
