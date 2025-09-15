@@ -108,6 +108,7 @@ export const Depoimentos = () => {
           <SwiperSlide>
             <Depoimento
               depoimento='"Meu nome é Carlos Adrian, tenho 16 anos e participei do Instituto doutor Rocha Lima por seis anos, o Instituto contribuiu muito no meu crescimento por conta de muitas coisas que eu aprendi lá, eu aprendi sobre novas culturas, novas religiões, novos tipos de artes e etc. Conheci novas pessoas, fiz muitos amigos e participei de todas as atividades que acontecem lá no Instituto."'
+              nome="Carlos Adrian da Silva"
               foto={adrianMelo}
               relacao="Ex participante do A&C"
             />
