@@ -36,7 +36,7 @@ export const ODS = () => {
             dos ODS.
           </p>
         </div>
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 mt-20 sm:mt-0">
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
           <div>
             <img className="w-full" src={ods1} alt="ODS 1 - Erradicação da pobreza" />
           </div>
