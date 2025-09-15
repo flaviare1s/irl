@@ -6,7 +6,7 @@ import ods10 from "../assets/img/ods/ods10.jpg";
 import ods11 from "../assets/img/ods/ods11.jpg";
 import ods12 from "../assets/img/ods/ods12.jpg";
 import ods16 from "../assets/img/ods/ods16.jpg";
-import background from "../assets/img/fotos/programas/Acolhendo.PNG"
+import background from "../assets/img/fotos/bg-ods.jpg";
 
 export const ODS = () => {
   return (
