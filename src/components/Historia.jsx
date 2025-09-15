@@ -1,7 +1,7 @@
 import { Sessao } from "../components/Sessao";
 import { SessaoConteudo1 } from "../components/SessaoConteudo1";
 
-import foto1 from "../assets/img/fotos/foto1.jpg";
+import foto from "../assets/img/fotos/nossa_historia.jpg";
 import elementoGrafico from "../assets/img/elementos/elemento-amarelo1.png"
 
 export const Historia = () => {
@@ -26,7 +26,7 @@ export const Historia = () => {
   ];
 
   return (
-    <Sessao title="Nossa História" img={foto1} descricao="Duas crianças do IRL na janela" isRowReverse={true} elementoGrafico1={elementoGrafico}>
+    <Sessao title="Nossa História" img={foto} descricao="Duas crianças do IRL na janela" isRowReverse={true} elementoGrafico1={elementoGrafico}>
       <div className="bg-primary rounded-md overflow-hidden">
         {eventos.map((evento, index) => (
           <SessaoConteudo1
