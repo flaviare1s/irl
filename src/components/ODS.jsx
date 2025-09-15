@@ -7,12 +7,16 @@ import ods11 from "../assets/img/ods/ods11.jpg";
 import ods12 from "../assets/img/ods/ods12.jpg";
 import ods16 from "../assets/img/ods/ods16.jpg";
 import background from "../assets/img/fotos/bg-ods.jpg";
+import backgroundMobile from "../assets/img/fotos/bg-ods-mobile.jpg";
 
 export const ODS = () => {
   return (
     <section className="relative flex flex-col lg:flex-row justify-center items-center py-10 px-4 md:px-10">
-      <div className="absolute top-0 left-0 w-full h-full object-cover -z-30">
+      <div className="hidden md:block absolute top-0 left-0 w-full h-full object-cover -z-30">
         <img src={background} />
+      </div>
+      <div className="block md:hidden absolute top-0 left-0 w-full h-full object-cover -z-30">
+        <img src={backgroundMobile} />
       </div>
       <div className="absolute top-0 left-0 w-full h-full bg-[#88B04B] opacity-80 -z-20">
       </div>
@@ -32,7 +36,7 @@ export const ODS = () => {
             dos ODS.
           </p>
         </div>
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 mt-20 sm:mt-0">
           <div>
             <img className="w-full" src={ods1} alt="ODS 1 - Erradicação da pobreza" />
           </div>
