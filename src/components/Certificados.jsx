@@ -4,8 +4,9 @@ import { BotaoDoacoes } from './BotaoDoacoes'
 
 import docMunicipal from '../assets/img/documentos/up-municipal.jpg'
 import docEstadual from '../assets/img/documentos/up-estadual.jpg'
+import docCmas from '../assets/img/documentos/cmas.jpg'
 import docCebas1 from '../assets/img/documentos/cebas1.jpg'
-import docCebas2 from '../assets/img/documentos/cebas2.jpg'
+// import docCebas2 from '../assets/img/documentos/cebas2.jpg'
 
 export const Certificados = () => {
   return (
@@ -19,7 +20,7 @@ export const Certificados = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:min-h-[400px]">
           <Certificado bgColor="bg-living-coral" nome="Utilidade Publica Municipal" img={docMunicipal} />
-          <Certificado bgColor="bg-freesia" nome="CMAs" img={docCebas2} />
+          <Certificado bgColor="bg-freesia" nome="CMAs" img={docCmas} />
           <Certificado bgColor="bg-radiant-orchid" nome="Utilidade Publica Estadual" img={docEstadual} />
           <Certificado bgColor="bg-greenery" nome="CEBAS" img={docCebas1} />
         </div>
