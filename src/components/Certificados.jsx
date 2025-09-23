@@ -6,7 +6,7 @@ import docMunicipal from '../assets/img/documentos/up-municipal.jpg'
 import docEstadual from '../assets/img/documentos/up-estadual.jpg'
 import docCmas from '../assets/img/documentos/cmas.jpg'
 import docCebas1 from '../assets/img/documentos/cebas1.jpg'
-// import docCebas2 from '../assets/img/documentos/cebas2.jpg'
+import docCebas2 from '../assets/img/documentos/cebas2.jpg'
 
 export const Certificados = () => {
   return (
@@ -22,7 +22,7 @@ export const Certificados = () => {
           <Certificado bgColor="bg-living-coral" nome="Utilidade Publica Municipal" img={docMunicipal} />
           <Certificado bgColor="bg-freesia" nome="CMAs" img={docCmas} />
           <Certificado bgColor="bg-radiant-orchid" nome="Utilidade Publica Estadual" img={docEstadual} />
-          <Certificado bgColor="bg-greenery" nome="CEBAS" img={docCebas1} />
+          <Certificado bgColor="bg-greenery" nome="CEBAS" img={[docCebas1, docCebas2]} />
         </div>
         <div className="mt-10">
           <BotaoDoacoes />
