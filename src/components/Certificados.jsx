@@ -2,6 +2,11 @@ import pattern from '../assets/img/elementos/elemento-amarelo3.png'
 import { Certificado } from './Certificado'
 import { BotaoDoacoes } from './BotaoDoacoes'
 
+import docMunicipal from '../assets/img/documentos/up-municipal.jpg'
+import docEstadual from '../assets/img/documentos/up-estadual.jpg'
+import docCebas1 from '../assets/img/documentos/cebas1.jpg'
+import docCebas2 from '../assets/img/documentos/cebas2.jpg'
+
 export const Certificados = () => {
   return (
     <div className="bg-primary flex flex-col justify-center items-center py-10 px-4 md:px-10">
@@ -13,10 +18,10 @@ export const Certificados = () => {
       </div>
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:min-h-[400px]">
-          <Certificado bgColor="bg-living-coral" nome="Utilidade Publica Municipal" />
-          <Certificado bgColor="bg-freesia" nome="CMAs" />
-          <Certificado bgColor="bg-radiant-orchid" nome="Utilidade Publica Estadual" />
-          <Certificado bgColor="bg-greenery" nome="CEBAS" />
+          <Certificado bgColor="bg-living-coral" nome="Utilidade Publica Municipal" img={docMunicipal} />
+          <Certificado bgColor="bg-freesia" nome="CMAs" img={docCebas2} />
+          <Certificado bgColor="bg-radiant-orchid" nome="Utilidade Publica Estadual" img={docEstadual} />
+          <Certificado bgColor="bg-greenery" nome="CEBAS" img={docCebas1} />
         </div>
         <div className="mt-10">
           <BotaoDoacoes />
