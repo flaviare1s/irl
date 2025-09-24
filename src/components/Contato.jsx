@@ -38,8 +38,8 @@ export const Contato = () => {
       className="w-full md:w-1/2 mx-auto p-6 bg-white rounded-lg shadow-md space-y-4"
       onSubmit={handleSubmit(onSubmit, onError)}
     >
-      <h2 className="text-2xl font-bold text-primary">Entre em contato</h2>
-      <p className="text-gray-600">Ou mande sua mensagem pela caixa abaixo</p>
+      <h2 className="text-center text-2xl font-bold text-primary">Entre em contato</h2>
+      <p className="text-gray-600 text-center">Ou mande sua mensagem pela caixa abaixo</p>
 
       <div className="flex flex-col">
         <label htmlFor="nome" className="text-sm font-medium text-primary">Nome</label>
