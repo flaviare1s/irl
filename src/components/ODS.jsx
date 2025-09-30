@@ -11,7 +11,7 @@ import backgroundMobile from "../assets/img/fotos/bg-ods-mobile.jpg";
 
 export const ODS = () => {
   return (
-    <section className="relative flex flex-col lg:flex-row justify-center items-center py-10 px-4 md:px-10">
+    <section className="relative flex flex-col lg:flex-row justify-center items-center py-10 px-4 md:px-10 xl:py-[100px] 2xl:py-[150px]">
       <div className="hidden md:block absolute top-0 left-0 w-full h-full object-cover -z-30">
         <img src={background} />
       </div>
