@@ -18,7 +18,7 @@ export const Numeros = () => {
           <Numero textColor="text-greenery" numero='988' descricao='Aulas de educação social e educação formal' />
           <Numero textColor="text-living-coral" numero='1140' descricao='Aulas de arte-educação e esporte' />
           <Numero textColor="text-radiant-orchid" numero='38' descricao='Encontros formativos do Grupo de Mulheres Francisca Clotilde' />
-          <Numero textColor="text-primary" numero='23.920' descricao='Refeições servidas' />
+          <Numero textColor="text-primary" numero='23920' descricao='Refeições servidas' />
         </div>
         <div className="mt-10">
           <BotaoDoacoes />

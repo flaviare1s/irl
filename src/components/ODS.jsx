@@ -20,12 +20,9 @@ export const ODS = () => {
       </div>
       <div className="absolute top-0 left-0 w-full h-full bg-[#88B04B] opacity-80 -z-20">
       </div>
-      <div className=" text-white grid grid-cols-1 md:grid-cols-2 gap-5 py-10 px-4 md:px-10 lg:px-20 xl:px-[200px] items-center">
+      <div className=" text-white grid grid-cols-1 md:grid-cols-2 gap-10 py-10 px-4 md:px-10 lg:px-20 xl:px-[200px] items-center">
         <div>
-          <h2 className="text-4xl font-bold mb-5">
-            Acreditamos que negócios de impacto socioambiental melhoram o mundo
-          </h2>
-          <p>
+          <h2 className="text-lg font-bold">
             Os Objetivos de Desenvolvimento Sustentável (ODS) são 17 objetivos
             mundiais, propostos pela Organização das Nações Unidas (ONU), e visam
             alcançar um futuro mais justo e sustentável com proposições como: a
@@ -34,7 +31,7 @@ export const ODS = () => {
             outros. O IRL está alinhado com esses valores e, através da sua rotina
             educativa, tenta contribuir com a implementação das metas de alguns
             dos ODS.
-          </p>
+          </h2>
         </div>
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
           <div>

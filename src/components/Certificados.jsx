@@ -20,7 +20,7 @@ export const Certificados = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:min-h-[400px]">
           <Certificado bgColor="bg-living-coral" nome="Utilidade Pública Municipal" img={docMunicipal} />
-          <Certificado bgColor="bg-freesia" nome="CMAs" img={docCmas} />
+          <Certificado bgColor="bg-freesia" nome="CMAS" img={docCmas} />
           <Certificado bgColor="bg-radiant-orchid" nome="Utilidade Pública Estadual" img={docEstadual} />
           <Certificado bgColor="bg-greenery" nome="CEBAS" img={[docCebas1, docCebas2]} />
         </div>
