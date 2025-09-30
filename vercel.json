@@ -1,3 +1,10 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "https://sonorous-dragon-472218-d0.web.app",
+      "permanent": true
+    }
+  ]
 }
