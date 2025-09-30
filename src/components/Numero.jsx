@@ -27,7 +27,7 @@ export const Numero = ({ textColor, numero, descricao }) => {
 
   return (
     <div>
-      <p className={`${textColor} text-6xl md:text-7xl font-bold text-center`}>
+      <p className={`${textColor} text-5xl md:text-7xl font-bold text-center`}>
         {formattedCount}
       </p>
       <p className="text-sm text-center">{descricao}</p>
