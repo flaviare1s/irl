@@ -1,10 +1,6 @@
-# Somos IRL 💙
+# Site do Instituto Dr. Rocha Lima
 
 _Leia em outros idiomas: [English](README.en.md)_
-
-<div align="center">
-  <img src="./src/assets/img/elementos/logo.png" alt="IRL Logo" width="200"/>
-</div>
 
 ## 📋 Sobre o Projeto
 
