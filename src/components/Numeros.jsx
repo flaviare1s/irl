@@ -8,17 +8,17 @@ export const Numeros = () => {
       <div className="flex justify-center items-center gap-1 sm:gap-3 mb-10">
         <img className="w-10" src={pattern} />
         <h2 className="text-2xl sm:text-3xl md:text-5xl text-center font-bold">
-          Números de impacto positivo (2024)
+          Números de impacto positivo (2025)
         </h2>
       </div>
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="grid grid-cols-2 md:grid-cols-3 md:pr-[200px] gap-8 lg:min-h-[400px]">
-          <Numero textColor="text-primary" numero='85' descricao='Crianças e adolescentes participantes' />
-          <Numero textColor="text-freesia" numero='62' descricao='Famílias diretamente beneficiadas' />
-          <Numero textColor="text-greenery" numero='988' descricao='Aulas de educação social e educação formal' />
-          <Numero textColor="text-living-coral" numero='1140' descricao='Aulas de arte-educação e esporte' />
-          <Numero textColor="text-radiant-orchid" numero='38' descricao='Encontros formativos do Grupo de Mulheres Francisca Clotilde' />
-          <Numero textColor="text-primary" numero='23920' descricao='Refeições servidas' />
+          <Numero textColor="text-freesia" numero='58' descricao='Famílias diretamente beneficiadas' />
+          <Numero textColor="text-primary" numero='238' descricao='Pessoas diretamente beneficiadas' />
+          <Numero textColor="text-greenery" numero='1043' descricao='Aulas de educação não formal e educação formal' />
+          <Numero textColor="text-living-coral" numero='1259' descricao='Atividades de arte-educação e esporte' />
+          <Numero textColor="text-radiant-orchid" numero='73' descricao='Encontros do Grupo de Mulheres Francisca Clotilde' />
+          <Numero textColor="text-primary" numero='19028' descricao='Refeições servidas' />
         </div>
         <div className="mt-10">
           <BotaoDoacoes />
