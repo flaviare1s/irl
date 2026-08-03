@@ -1,14 +1,14 @@
 import { BotaoDoacoes } from "./BotaoDoacoes";
 import { Depoimento } from "./Depoimento";
 
-import pattern from "../assets/img/elementos/elemento-azul1.png";
-import neuzaCysne from "../assets/img/fotos/neuza_cysne.jpg";
-import clausonSales from "../assets/img/fotos/clauson_sales.jpg";
-import adrianMelo from "../assets/img/fotos/adrian_melo.jpg";
-import mariaHorteneuza from "../assets/img/fotos/maria_horteneuza.jpg";
-import inae from "../assets/img/fotos/inae.jpg";
-import mycael from "../assets/img/fotos/mycael.JPG";
-import miguel from "../assets/img/fotos/miguel.JPG";
+import pattern from "../assets/img/elementos/elemento-azul1.webp";
+import neuzaCysne from "../assets/img/fotos/neuza_cysne.webp";
+import clausonSales from "../assets/img/fotos/clauson_sales.webp";
+import adrianMelo from "../assets/img/fotos/adrian_melo.webp";
+import mariaHorteneuza from "../assets/img/fotos/maria_horteneuza.webp";
+import inae from "../assets/img/fotos/inae.webp";
+import mycael from "../assets/img/fotos/mycael.webp";
+import miguel from "../assets/img/fotos/miguel.webp";
 
 // Importações do Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +21,7 @@ export const Depoimentos = () => {
   return (
     <div className="bg-living-coral flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 lg:pr-[250px]">
       <div className="flex justify-center items-center gap-3 mb-10">
-        <img className="w-10" src={pattern} alt="elemento decorativo" />
+        <img className="w-10" src={pattern} alt="elemento decorativo" loading="lazy" />
         <h2 className="text-white text-3xl md:text-5xl text-center font-bold">
           O que dizem sobre nós
         </h2>

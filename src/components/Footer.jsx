@@ -6,7 +6,7 @@ import {
   FaMapMarkedAlt,
   FaYoutube,
 } from "react-icons/fa";
-import Logo from "../assets/img/logo-azul.png";
+import Logo from "../assets/img/logo-azul.webp";
 import { Parceiros } from "./Parceiros";
 
 export const Footer = () => {
@@ -16,7 +16,7 @@ export const Footer = () => {
       <div className="flex justify-center items-center gap-5 py-3">
         <div className="flex flex-col justify-center items-center w-[50%]">
           <div className="h-[80px] w-[120px] md:h-[100px] md:w-[120px] flex justify-center items-center">
-            <img className="w-full" src={Logo} alt="Logo do IRL" />
+            <img className="w-full" src={Logo} alt="Logo do IRL" loading="lazy" />
           </div>
           <div className="flex gap-5 items-center justify-center ml-[-20px] mt-2">
             <div className="bg-primary rounded-full w-[32px] h-[32px] flex justify-center items-center hover:bg-freesia text-lg text-freesia text-center hover:text-primary">

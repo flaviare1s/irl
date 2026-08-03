@@ -1,4 +1,4 @@
-import qrcode from "../assets/img/qrcode.png";
+import qrcode from "../assets/img/qrcode.webp";
 
 export const DadosBancarios = () => {
   return (
@@ -23,6 +23,7 @@ export const DadosBancarios = () => {
           <img
             src={qrcode}
             alt="Qrcode do PIX"
+            loading="lazy"
             className="w-[200px] h-[200px] object-contain"
           />
           <div className="text-center">

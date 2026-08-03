@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Logo from "../assets/img/logo-branca.png"
+import Logo from "../assets/img/logo-branca.webp"
 import { DesktopMenu } from "./DesktopMenu"
 import { MobileMenu } from "./MobileMenu"
 export const Header = () => {

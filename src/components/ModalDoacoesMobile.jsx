@@ -1,6 +1,6 @@
 import Modal from 'react-modal';
 import { useState } from 'react';
-import qrcode from '../assets/img/qrcode.png';
+import qrcode from '../assets/img/qrcode.webp';
 
 Modal.setAppElement('#root');
 

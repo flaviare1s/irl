@@ -8,6 +8,8 @@ Site institucional do **Instituto Dr. Rocha Lima de Proteção e Assistência à
 
 Este projeto foi desenvolvido com React e Vite, oferecendo uma experiência moderna e responsiva para apresentar os programas sociais, equipe, missão e formas de contribuir com o instituto.
 
+Projeto desenvolvido para o PEX I e aprimorado no PEX V (Projetos de Extensão do curso de ADS da Faculdade Descomplica).
+
 ## 🚀 Tecnologias Utilizadas
 
 - **React** 19.0.0 - Biblioteca JavaScript para construção de interfaces

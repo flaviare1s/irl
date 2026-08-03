@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-nunito: "Nunito", sans-serif;
+  --font-nunito: "Nunito Variable", "Nunito", sans-serif;
   --color-primary: #2E4DA7;
   --color-living-coral: #FA7268;
   --color-freesia: #F6C324;

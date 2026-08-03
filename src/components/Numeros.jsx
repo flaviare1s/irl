@@ -1,4 +1,4 @@
-import pattern from "../assets/img/elementos/elemento-roxo1.png";
+import pattern from "../assets/img/elementos/elemento-roxo1.webp";
 import { BotaoDoacoes } from "./BotaoDoacoes";
 import { Numero } from "./Numero";
 

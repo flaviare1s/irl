@@ -1,12 +1,12 @@
-import pattern from '../assets/img/elementos/elemento-amarelo3.png'
+import pattern from '../assets/img/elementos/elemento-amarelo3.webp'
 import { Certificado } from './Certificado'
 import { BotaoDoacoes } from './BotaoDoacoes'
 
-import docMunicipal from '../assets/img/documentos/up-municipal.jpg'
-import docEstadual from '../assets/img/documentos/up-estadual.jpg'
-import docCmas from '../assets/img/documentos/cmas.jpg'
-import docCebas1 from '../assets/img/documentos/cebas1.jpg'
-import docCebas2 from '../assets/img/documentos/cebas2.jpg'
+import docMunicipal from '../assets/img/documentos/up-municipal.webp'
+import docEstadual from '../assets/img/documentos/up-estadual.webp'
+import docCmas from '../assets/img/documentos/cmas.webp'
+import docCebas1 from '../assets/img/documentos/cebas1.webp'
+import docCebas2 from '../assets/img/documentos/cebas2.webp'
 
 export const Certificados = () => {
   return (

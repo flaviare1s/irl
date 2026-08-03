@@ -1,5 +1,5 @@
 import { Contato } from "../components/Contato";
-import elementoGrafico from "../assets/img/elementos/x.png";
+import elementoGrafico from "../assets/img/elementos/x.webp";
 import { DadosBancarios } from "../components/DadosBancarios";
 import { useSeo } from "../hooks/useSeo";
 

@@ -1,7 +1,7 @@
 import { ProgramaComponente } from "./ProgramaComponente";
-import img1 from "../assets/img/elementos/figura1.png";
-import img3 from "../assets/img/elementos/figura3.png";
-import img4 from "../assets/img/elementos/figura4.png";
+import img1 from "../assets/img/elementos/figura1.webp";
+import img3 from "../assets/img/elementos/figura3.webp";
+import img4 from "../assets/img/elementos/figura4.webp";
 
 import { BotaoDoacoes } from "./BotaoDoacoes";
 

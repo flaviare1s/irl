@@ -6,7 +6,7 @@ export const Depoimento = ({ depoimento, foto, nome, relacao }) => {
       </div>
       <div className="flex justify-start items-center gap-4 my-1 w-full">
         <div className="w-[50px] h-[50px] rounded-full overflow-hidden flex-shrink-0">
-          <img className="w-full h-full object-cover" src={foto} alt={nome} />
+          <img className="w-full h-full object-cover" src={foto} alt={nome} loading="lazy" decoding="async" />
         </div>
         <div className="flex flex-col">
           <h3 className="font-bold text-sm">{nome}</h3>

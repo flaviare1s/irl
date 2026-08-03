@@ -1,7 +1,7 @@
 import { Sessao } from "../components/Sessao";
 
 import video from "../assets/videos/video.mp4"
-import elementoGrafico from "../assets/img/elementos/elemento-rosa3.png"
+import elementoGrafico from "../assets/img/elementos/elemento-rosa3.webp"
 import { SessaoConteudo2 } from "./SessaoConteudo2";
 import { Button } from "./Button";
 
