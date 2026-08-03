@@ -28,6 +28,7 @@ export const ModalDocumentos = ({ isOpen, closeModal, img, nome }) => {
         <button
           onClick={closeModal}
           className="text-white text-2xl font-bold rounded-full hover:text-living-coral transition duration-300 cursor-pointer absolute top-2 right-4"
+          aria-label="Fechar"
         >
           X
         </button>

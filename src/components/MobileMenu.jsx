@@ -33,6 +33,9 @@ export const MobileMenu = () => {
         ref={menuButtonRef}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         className="text-white"
+        aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+        aria-expanded={isMenuOpen}
+        aria-controls="menu-mobile"
       >
         {isMenuOpen ? (
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
@@ -47,6 +50,8 @@ export const MobileMenu = () => {
 
       <div
         ref={menuRef}
+        id="menu-mobile"
+        inert={!isMenuOpen}
         className={`fixed top-[80px] left-0 z-40 w-[95%] h-full bg-primary transition-transform duration-300 ${isMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
           }`}
       >

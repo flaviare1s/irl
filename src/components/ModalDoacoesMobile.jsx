@@ -28,6 +28,7 @@ export const ModalDoacoesMobile = ({ isOpen, closeModal }) => {
         <button
           onClick={closeModal}
           className="text-white text-2xl font-bold pr-4 rounded-full hover:text-primary transition duration-300 cursor-pointer"
+          aria-label="Fechar"
         >
           X
         </button>

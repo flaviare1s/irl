@@ -25,6 +25,7 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
+                aria-label="Instagram do IRL (abre em nova aba)"
               >
                 <FaInstagram className="inline-block mb-[3px]" />
               </a>
@@ -35,6 +36,7 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
+                aria-label="Facebook do IRL (abre em nova aba)"
               >
                 <FaFacebook className="inline-block mb-[3px]" />
               </a>
@@ -45,6 +47,7 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
+                aria-label="YouTube do IRL (abre em nova aba)"
               >
                 <FaYoutube className="inline-block mb-[3px]" />
               </a>

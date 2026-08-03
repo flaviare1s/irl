@@ -8,7 +8,7 @@ import { Button } from "./Button";
 export const Equipe = () => {
 
   return (
-    <Sessao title="Nossa Equipe" img={fotoEquipe} isRowReverse={true} elementoGrafico1={elementoGrafico}>
+    <Sessao title="Nossa Equipe" img={fotoEquipe} descricao="Equipe do IRL reunida" isRowReverse={true} elementoGrafico1={elementoGrafico}>
       <SessaoConteudo2 text="A equipe IRL é responsável por fazer do Instituto Dr. Rocha Lima um espaço educativo que oportuniza o desenvolvimento de potencialidades inidividuais e coletivas das crianças e adolescentes assistidos." />
       <div className="mt-10">
         <Button text="Conheça Nossos Programas" rota="/programas" bgColor="bg-freesia" />

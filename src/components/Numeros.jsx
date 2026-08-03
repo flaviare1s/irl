@@ -6,7 +6,7 @@ export const Numeros = () => {
   return (
     <div className="flex flex-col justify-center items-center py-10 px-4 md:px-10 bg-white">
       <div className="flex justify-center items-center gap-1 sm:gap-3 mb-10">
-        <img className="w-10" src={pattern} />
+        <img className="w-10" src={pattern} alt="" />
         <h2 className="text-2xl sm:text-3xl md:text-5xl text-center font-bold">
           Números de impacto positivo (2025)
         </h2>

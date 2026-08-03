@@ -7,6 +7,7 @@ export const BotaoWhatsapp = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 z-50 bg-greenery hover:bg-white text-white hover:text-greenery border hover:border-greenery rounded-full p-4 shadow-lg transition-all duration-300 lg:hidden"
+      aria-label="Fale com o IRL pelo WhatsApp (abre em nova aba)"
     >
       <FaWhatsapp className="text-2xl" />
     </a>

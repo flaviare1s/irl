@@ -12,7 +12,7 @@ export const Certificados = () => {
   return (
     <div className="bg-primary flex flex-col justify-center items-center py-10 px-4 md:px-10">
       <div className="flex justify-center items-center gap-1 sm:gap-3 mb-10">
-        <img className="w-10" src={pattern} />
+        <img className="w-10" src={pattern} alt="" />
         <h2 className="text-white text-2xl sm:text-3xl md:text-5xl text-center font-bold">
           Certificados e Certidões
         </h2>

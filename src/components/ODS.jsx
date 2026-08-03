@@ -13,10 +13,10 @@ export const ODS = () => {
   return (
     <section className="relative flex flex-col lg:flex-row justify-center items-center py-10 px-4 md:px-10 xl:py-[100px] 2xl:py-[150px]">
       <div className="hidden md:block absolute top-0 left-0 w-full h-full object-cover -z-30">
-        <img src={background} />
+        <img src={background} alt="" />
       </div>
       <div className="block md:hidden absolute top-0 left-0 w-full h-full object-cover -z-30">
-        <img src={backgroundMobile} />
+        <img src={backgroundMobile} alt="" />
       </div>
       <div className="absolute top-0 left-0 w-full h-full bg-[#88B04B] opacity-80 -z-20">
       </div>
@@ -53,7 +53,7 @@ export const ODS = () => {
             <img className="w-full" src={ods11} alt="ODS 11 - Cidades e comunidades sustentáveis" />
           </div>
           <div>
-            <img className="w-full" src={ods12} alt="ODS 11 - Cidades e comunidades sustentáveis" />
+            <img className="w-full" src={ods12} alt="ODS 12 - Consumo e produção responsáveis" />
           </div>
           <div>
             <img className="w-full" src={ods16} alt="ODS 16 - Paz, justiça e instituções eficazes" />
