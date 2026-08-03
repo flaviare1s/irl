@@ -1,4 +1,13 @@
+import { useSeo } from "../hooks/useSeo";
+
 export const NotFound = () => {
+  useSeo({
+    title: "Página não encontrada | Instituto Dr. Rocha Lima",
+    description: "A página que você procurou não foi encontrada.",
+    path: "/404",
+    noIndex: true,
+  });
+
   return (
     <div className="h-screen flex items-center justify-center bg-gray-100 px-6">
       <div className="text-center">

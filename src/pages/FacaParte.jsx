@@ -1,8 +1,15 @@
 import { Contato } from "../components/Contato";
 import elementoGrafico from "../assets/img/elementos/x.png";
 import { DadosBancarios } from "../components/DadosBancarios";
+import { useSeo } from "../hooks/useSeo";
 
 export const FacaParte = () => {
+  useSeo({
+    title: "Faça parte | Instituto Dr. Rocha Lima",
+    description: "Doe, seja voluntário ou entre em contato com o Instituto Dr. Rocha Lima. Veja os dados bancários, o PIX e como nos encontrar em Fortaleza (CE).",
+    path: "/participe",
+  });
+
   return (
     <div className="flex flex-col justify-center items-center">
       <section className="relative flex flex-col md:flex-row items-center justify-center gap-10 py-14 px-4 md:px-10 lg:px-20 xl:px-[200px] bg-gray-50">

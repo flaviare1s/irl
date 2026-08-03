@@ -9,10 +9,17 @@ import elementoGrafico1 from "../assets/img/elementos/elemento-verde2.png";
 import elementoGrafico2 from "../assets/img/elementos/elemento-azul2.png";
 import elementoGrafico3 from "../assets/img/elementos/elemento-rosa3.png";
 import elementoGrafico4 from "../assets/img/elementos/x.png";
+import { useSeo } from "../hooks/useSeo";
 
 export const Programas = () => {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
+
+  useSeo({
+    title: "Nossos Programas | Instituto Dr. Rocha Lima",
+    description: "Acolhendo e Convivendo, Grupo de Mulheres Francisca Clotilde e Sistema Agroflorestal: os programas do IRL para crianças, adolescentes e famílias.",
+    path: "/programas",
+  });
 
   useEffect(() => {
     if (!isLoading) {

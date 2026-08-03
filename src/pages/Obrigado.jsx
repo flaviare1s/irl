@@ -1,4 +1,13 @@
+import { useSeo } from "../hooks/useSeo";
+
 export const Obrigado = () => {
+  useSeo({
+    title: "Mensagem enviada | Instituto Dr. Rocha Lima",
+    description: "Recebemos seu contato. Em breve retornaremos a sua mensagem.",
+    path: "/obrigado",
+    noIndex: true,
+  });
+
   return (
     <div className="min-h-screen flex items-center justify-center text-primary px-4">
       <div className="text-center space-y-6 max-w-md">
