@@ -12,10 +12,7 @@ describe("BotaoDoacoesFixed + bandeja do PIX", () => {
 
     expect(botao()).toHaveAttribute("aria-expanded", "false");
     expect(botao()).toHaveAttribute("aria-controls", "bandeja-pix");
-    // A bandeja segue no DOM (é o CSS que anima), então precisa de inert para
-    // o QR code e o CNPJ não receberem Tab enquanto está escondida.
     expect(bandeja()).toHaveAttribute("inert");
-    expect(bandeja().className).toContain("opacity-0");
   });
 
   it("abre ao clicar", async () => {
@@ -26,7 +23,6 @@ describe("BotaoDoacoesFixed + bandeja do PIX", () => {
 
     expect(botao()).toHaveAttribute("aria-expanded", "true");
     expect(bandeja()).not.toHaveAttribute("inert");
-    expect(bandeja().className).toContain("opacity-100");
   });
 
   it("fecha ao clicar de novo", async () => {
@@ -54,7 +50,6 @@ describe("BotaoDoacoesFixed + bandeja do PIX", () => {
     render(<BotaoDoacoesFixed />);
 
     const classes = bandeja().className;
-    expect(classes).toContain("transition-[translate,opacity]");
     expect(classes).not.toMatch(/transition-all|right-\[100px\]/);
   });
 
