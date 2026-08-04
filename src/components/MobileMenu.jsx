@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,15 +52,14 @@ export const MobileMenu = () => {
         ref={menuRef}
         id="menu-mobile"
         inert={!isMenuOpen}
-        className={`fixed top-[80px] left-0 z-40 w-[95%] h-full bg-primary transition-transform duration-300 ${isMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
+        className={`fixed top-[80px] left-0 z-40 w-[95%] h-full bg-primary transition-[translate] duration-300 ease-out motion-reduce:transition-none ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
         <div className="flex flex-col items-start px-20 justify-center space-y-4 py-4">
-          <Link to="/" className="text-white link-nav" onClick={closeMenu}>IRL</Link>
-          <Link to="/" className="text-white link-nav" onClick={closeMenu}>Home</Link>
-          <Link to="/programas" className="text-white link-nav" onClick={closeMenu}>Programas</Link>
-          <Link to="/transparencia" className="text-white link-nav" onClick={closeMenu}>Transparência</Link>
-          <Link to="/participe" className="text-white link-nav cursor-pointer" onClick={closeMenu}>Faça parte</Link>
+          <NavLink to="/" end className="text-white link-nav" onClick={closeMenu}>Home</NavLink>
+          <NavLink to="/programas" className="text-white link-nav" onClick={closeMenu}>Programas</NavLink>
+          <NavLink to="/transparencia" className="text-white link-nav" onClick={closeMenu}>Transparência</NavLink>
+          <NavLink to="/participe" className="text-white link-nav cursor-pointer" onClick={closeMenu}>Faça parte</NavLink>
         </div>
       </div>
     </div>
