@@ -1,5 +1,6 @@
 import { BotaoDoacoes } from "./BotaoDoacoes";
 import { Depoimento } from "./Depoimento";
+import { useRevelar } from "../hooks/useRevelar";
 
 import pattern from "../assets/img/elementos/elemento-azul1.webp";
 import neuzaCysne from "../assets/img/fotos/neuza_cysne.webp";
@@ -18,8 +19,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export const Depoimentos = () => {
+  const revelar = useRevelar();
+
   return (
-    <div className="bg-living-coral flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 lg:pr-[250px]">
+    <div ref={revelar.ref} className={`${revelar.className} bg-living-coral flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 lg:pr-[250px]`}>
       <div className="flex justify-center items-center gap-3 mb-10">
         <img className="w-10" src={pattern} alt="elemento decorativo" loading="lazy" />
         <h2 className="text-white text-3xl md:text-5xl text-center font-bold">

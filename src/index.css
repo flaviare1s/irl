@@ -19,11 +19,57 @@
   bottom: -6px;
   left: 0;
   height: 2px;
-  width: 0;
+  width: 100%;
   background-color: var(--color-living-coral);
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
-.link-nav:hover::after {
-  width: 100%;
+.link-nav:hover::after,
+.link-nav:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.revelar {
+  opacity: 0;
+  transform: translateY(1.75rem);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+
+.revelar-visivel {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes entrada-rota {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animar-rota {
+  animation: entrada-rota 320ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revelar,
+  .revelar-visivel {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animar-rota {
+    animation: none;
+  }
+
+  .link-nav::after {
+    transition: none;
+  }
 }

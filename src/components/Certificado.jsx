@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { ModalDocumentos } from "./ModalDocumentos";
+import { useRevelar } from "../hooks/useRevelar";
 
 export const Certificado = ({ bgColor, nome, img }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const revelar = useRevelar()
   const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div ref={revelar.ref} className={`${revelar.className} flex flex-col items-center justify-center`}>
       <button onClick={openModal} className={`${bgColor} text-white p-4 rounded-full cursor-pointer hover:scale-105 transition-transform duration-300 shadow-lg`} aria-label={`Ver documento: ${nome}`}>
         <IoDocumentTextOutline className="text-4xl" title="Arquivo de Documento" />
       </button>

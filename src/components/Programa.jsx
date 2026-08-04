@@ -1,10 +1,13 @@
-// prioridade: só o primeiro programa da página fica acima da dobra e é o LCP.
-// Os demais entram com lazy para não competir por banda no carregamento inicial.
+import { useRevelar } from "../hooks/useRevelar";
+
 export const Programa = ({ id, img, titulo, paragrafos, bgColor, color, isReverse, elementoGrafico1, elementoGrafico2, elementoGrafico3, prioridade = false }) => {
+  const revelar = useRevelar();
+
   return (
       <section
         id={id}
-        className={`bg-${bgColor} text-${color} flex flex-col ${isReverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} justify-center gap-10 p-10 md:px-44 md:py-20 items-center scroll-mt-20 relative`}
+        ref={revelar.ref}
+        className={`${revelar.className} bg-${bgColor} text-${color} flex flex-col ${isReverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} justify-center gap-10 p-10 md:px-44 md:py-20 items-center scroll-mt-20 relative`}
       >
       <div className="hidden md:block absolute top-10 left-5">
         <img loading="lazy" className="h-20 md:h-32" src={elementoGrafico1} alt="" />

@@ -1,14 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import { useRevelar } from "../hooks/useRevelar";
 
 export const ProgramaComponente = ({ img, nome, texto, id }) => {
   const navigate = useNavigate();
+  const revelar = useRevelar();
 
   const handleClick = () => {
     navigate("/programas", { state: { scrollTo: id } });
   };
 
   return (
-    <section className="flex flex-col items-center justify-center px-4 py-6 lg:p-4 h-full">
+    <section ref={revelar.ref} className={`${revelar.className} flex flex-col items-center justify-center px-4 py-6 lg:p-4 h-full`}>
       <img className="mb-5 w-[150px] h-[150px]" src={img} alt={nome} loading="lazy" decoding="async" />
       <div className="flex-grow flex flex-col items-center">
         <h3 className="text-xl md:text-2xl font-bold text-center mb-5 text-white">{nome}</h3>

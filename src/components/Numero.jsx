@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useRevelar } from "../hooks/useRevelar";
 
 export const Numero = ({ textColor, numero, descricao }) => {
   const [count, setCount] = useState(0);
+  const revelar = useRevelar();
 
   useEffect(() => {
     let start = 0;
@@ -26,7 +28,7 @@ export const Numero = ({ textColor, numero, descricao }) => {
   const formattedCount = count.toLocaleString('en-US').replace(/,/g, '.');
 
   return (
-    <div>
+    <div ref={revelar.ref} className={revelar.className}>
       <p className={`${textColor} text-5xl md:text-7xl font-bold text-center`}>
         {formattedCount}
       </p>

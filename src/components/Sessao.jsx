@@ -1,10 +1,12 @@
 import { BotaoDoacoes } from "./BotaoDoacoes";
+import { useRevelar } from "../hooks/useRevelar";
 
 export const Sessao = ({ title, img, isRowReverse = false, children, elementoGrafico1, elementoGrafico2, descricao = '', bgColor = 'bg-white' }) => {
   const isVideo = img && (img.endsWith('.mp4') || img.endsWith('.webm') || img.endsWith('.ogg'));
+  const revelar = useRevelar();
 
   return (
-    <section className={`${bgColor} flex flex-col lg:flex-row justify-center items-center py-10 px-4 md:px-10 lg:px-20 xl:px-[200px]`}>
+    <section ref={revelar.ref} className={`${revelar.className} ${bgColor} flex flex-col lg:flex-row justify-center items-center py-10 px-4 md:px-10 lg:px-20 xl:px-[200px]`}>
       <div className="lg:hidden flex justify-center gap-3 items-center">
         <img className="h-10" src={elementoGrafico1} alt="" loading="lazy" />
         <h2 className="text-3xl md:text-5xl text-center font-bold">{title}</h2>
