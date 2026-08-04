@@ -42,31 +42,12 @@
   transform: none;
 }
 
-@keyframes entrada-rota {
-  from {
-    opacity: 0;
-    transform: translateY(0.5rem);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.animar-rota {
-  animation: entrada-rota 320ms ease-out both;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .revelar,
   .revelar-visivel {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-
-  .animar-rota {
-    animation: none;
   }
 
   .link-nav::after {

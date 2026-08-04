@@ -57,6 +57,7 @@ export const MobileMenu = () => {
       >
         <div className="flex flex-col items-start px-20 justify-center space-y-4 py-4">
           <Link to="/" className="text-white link-nav" onClick={closeMenu}>IRL</Link>
+          <Link to="/" className="text-white link-nav" onClick={closeMenu}>Home</Link>
           <Link to="/programas" className="text-white link-nav" onClick={closeMenu}>Programas</Link>
           <Link to="/transparencia" className="text-white link-nav" onClick={closeMenu}>Transparência</Link>
           <Link to="/participe" className="text-white link-nav cursor-pointer" onClick={closeMenu}>Faça parte</Link>
