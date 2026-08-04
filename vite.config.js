@@ -15,11 +15,14 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'html'],
       reportsDirectory: './coverage',
-      // include explícito para os arquivos sem teste também aparecerem no
-      // relatório — sem isso o v8 só conta o que algum teste importou, e a
-      // cobertura sai inflada.
       include: ['src/**/*.{js,jsx}'],
       exclude: ['src/**/*.test.{js,jsx}', 'src/test/**', 'src/main.jsx'],
+      thresholds: {
+        statements: 50,
+        branches: 50,
+        functions: 50,
+        lines: 50,
+      },
     },
   },
 })

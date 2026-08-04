@@ -22,15 +22,15 @@ export const Depoimentos = () => {
   const revelar = useRevelar();
 
   return (
-    <div ref={revelar.ref} className={`${revelar.className} bg-living-coral flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 lg:pr-[250px]`}>
-      <div className="flex justify-center items-center gap-3 mb-10">
+    <div ref={revelar.ref} className="bg-living-coral flex flex-col justify-center items-center py-10 px-4 md:px-10 lg:pl-20 lg:pr-[250px]">
+      <div className={`${revelar.className} flex justify-center items-center gap-3 mb-10`}>
         <img className="w-10" src={pattern} alt="elemento decorativo" loading="lazy" />
         <h2 className="text-white text-3xl md:text-5xl text-center font-bold">
           O que dizem sobre nós
         </h2>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full">
+      <div className={`${revelar.className} flex flex-col lg:flex-row justify-center items-center w-full`}>
         <Swiper
           modules={[Pagination, Navigation]}
           spaceBetween={30}
