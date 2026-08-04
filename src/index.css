@@ -26,8 +26,11 @@
   transition: transform 0.3s ease;
 }
 
+/* O traço da rota atual é o mesmo do hover, só que permanente. O NavLink
+   já põe aria-current="page" no link ativo, então não precisa de classe. */
 .link-nav:hover::after,
-.link-nav:focus-visible::after {
+.link-nav:focus-visible::after,
+.link-nav[aria-current="page"]::after {
   transform: scaleX(1);
 }
 

@@ -1,34 +1,18 @@
-import { useState, useEffect } from 'react';
 import qrcode from '../assets/img/qrcode.webp';
-
 export const ModalDoacoesDrawer = ({ isOpen }) => {
-  const [shouldRender, setShouldRender] = useState(false);
-  const [animationClass, setAnimationClass] = useState('');
-
-  useEffect(() => {
-    if (isOpen) {
-      setShouldRender(true);
-      setAnimationClass('right-[100px] opacity-0');
-      const timeout = setTimeout(() => {
-        setAnimationClass('right-[168px] opacity-100');
-      }, 10);
-      return () => clearTimeout(timeout);
-    } else {
-      setAnimationClass('right-[100px] opacity-0');
-      const timeout = setTimeout(() => setShouldRender(false), 500);
-      return () => clearTimeout(timeout);
-    }
-  }, [isOpen]);
-
-  if (!shouldRender) return null;
-
   return (
     <div
+      id="bandeja-pix"
+      inert={!isOpen}
       className={`
-        fixed top-1/2 transform -translate-y-1/2 z-10 
+        fixed top-1/2 right-[168px] z-10 mt-[32px]
         h-[235px] w-[250px] rounded-l-2xl shadow-xl font-nunito
-        bg-radiant-orchid overflow-hidden transition-all duration-500 ease-in-out mt-[32px]
-        ${animationClass}
+        bg-radiant-orchid overflow-hidden
+        transition-[translate,opacity] duration-300 ease-out
+        motion-reduce:transition-none
+        ${isOpen
+          ? 'translate-x-0 -translate-y-1/2 opacity-100'
+          : 'translate-x-[68px] -translate-y-1/2 opacity-0 pointer-events-none'}
       `}
     >
       <div className="flex flex-row-reverse items-start justify-start h-full">

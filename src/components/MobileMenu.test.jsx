@@ -21,8 +21,6 @@ describe("MobileMenu", () => {
     const botao = screen.getByRole("button", { name: "Abrir menu" });
     expect(botao).toHaveAttribute("aria-expanded", "false");
     expect(botao).toHaveAttribute("aria-controls", "menu-mobile");
-    // Fechado, o painel só sai da tela via translate: sem inert os links
-    // continuariam recebendo Tab.
     expect(painel()).toHaveAttribute("inert");
   });
 
@@ -75,8 +73,22 @@ describe("MobileMenu", () => {
   it("lista as quatro rotas do site", () => {
     montar();
 
-    ["IRL", "Programas", "Transparência", "Faça parte"].forEach((nome) =>
+    ["Home", "Programas", "Transparência", "Faça parte"].forEach((nome) =>
       expect(screen.getByRole("link", { name: nome })).toBeInTheDocument()
+    );
+  });
+
+  // Mesmo traço permanente do menu desktop: quem escreve o aria-current é o
+  // NavLink, e o CSS pendura o sublinhado nele.
+  it("marca a rota atual no menu", () => {
+    montar();
+
+    expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute(
+      "aria-current",
+      "page"
+    );
+    expect(screen.getByRole("link", { name: "Programas" })).not.toHaveAttribute(
+      "aria-current"
     );
   });
 });
