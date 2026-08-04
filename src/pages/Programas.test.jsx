@@ -1,7 +1,22 @@
-import { describe, it, expect, afterEach, vi } from "vitest";
+import { describe, it, expect, afterEach, beforeEach, vi } from "vitest";
 import { render, screen, act } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { Programas } from "./Programas";
+
+// jsdom não implementa scrollIntoView.
+const rolarAte = vi.fn();
+Element.prototype.scrollIntoView = rolarAte;
+
+// Chegando pelo "+" de um card da home, o id vem no state da navegação.
+const montarVindoDe = (scrollTo) => {
+  const r = render(
+    <MemoryRouter initialEntries={[{ pathname: "/programas", state: { scrollTo } }]}>
+      <Programas />
+    </MemoryRouter>
+  );
+  act(() => vi.advanceTimersByTime(1100));
+  return r;
+};
 
 // A página mostra um LoadingScreen por 1s antes de liberar o scroll até a
 // âncora; sem adiantar o timer os testes esperariam de verdade.
@@ -16,6 +31,7 @@ const montar = () => {
 };
 
 describe("Programas", () => {
+  beforeEach(() => rolarAte.mockClear());
   afterEach(() => vi.useRealTimers());
 
   it("define o SEO da própria rota", () => {
@@ -50,6 +66,29 @@ describe("Programas", () => {
     expect(fotos).toHaveLength(3);
     expect(prioritarias).toHaveLength(1);
     expect(adiadas).toHaveLength(2);
+  });
+
+  // Fecha o fluxo que começa no "+" do card da home: o id chega pelo state e
+  // a página tem que rolar até aquele programa, não parar no topo.
+  it("rola até o programa pedido na navegação", () => {
+    vi.useFakeTimers();
+    montarVindoDe("agrofloresta");
+
+    expect(rolarAte).toHaveBeenCalledWith({ behavior: "smooth" });
+  });
+
+  it("não rola quando a navegação não pede âncora", () => {
+    vi.useFakeTimers();
+    montarVindoDe(undefined);
+
+    expect(rolarAte).not.toHaveBeenCalled();
+  });
+
+  it("ignora âncora inexistente sem quebrar", () => {
+    vi.useFakeTimers();
+    montarVindoDe("programa-que-nao-existe");
+
+    expect(rolarAte).not.toHaveBeenCalled();
   });
 
   it("mostra os títulos dos programas", () => {

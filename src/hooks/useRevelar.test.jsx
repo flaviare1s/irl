@@ -85,6 +85,20 @@ describe("useRevelar", () => {
 
   // Modo de falha mais grave: .revelar começa em opacity 0, então sem esta
   // saída o site inteiro ficaria invisível num navegador sem a API.
+  // Um componente pode chamar o hook e não pendurar a ref em nada. Sem a
+  // saída antecipada o observe() receberia null e lançaria.
+  it("não observa nada quando a ref não é anexada", () => {
+    const { Falso, instancias } = criarObserverFalso();
+    globalThis.IntersectionObserver = Falso;
+    const SemRef = () => {
+      useRevelar();
+      return <div />;
+    };
+
+    expect(() => render(<SemRef />)).not.toThrow();
+    expect(instancias).toHaveLength(0);
+  });
+
   it("mostra o conteúdo quando o navegador não tem IntersectionObserver", () => {
     globalThis.IntersectionObserver = undefined;
 

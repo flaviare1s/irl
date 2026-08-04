@@ -14,9 +14,7 @@ const base = {
 const fotoDo = (container) => container.querySelector("img[src='/acolhendo.webp']");
 
 describe("Programa", () => {
-  // Os dois atributos são mutuamente exclusivos: lazy no elemento do LCP é
-  // justamente o que o Lighthouse reclama, e prioridade alta nos de baixo da
-  // página rouba banda do que está visível.
+
   it("com prioridade: pede prioridade alta e nunca lazy", () => {
     const { container } = render(<Programa {...base} prioridade />);
 
