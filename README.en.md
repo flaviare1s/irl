@@ -2,78 +2,109 @@
 
 _Read this in other languages: [Português](README.md)_
 
+![Tests](https://img.shields.io/badge/tests-129%20passing-brightgreen)
+![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
+![React](https://img.shields.io/badge/React-19-61DAFB)
+![Vite](https://img.shields.io/badge/Vite-6-646CFF)
+
 ## 📋 About the Project
 
 Institutional website for the **Dr. Rocha Lima Institute for Child Protection and Assistance**, a non-profit organization dedicated to protecting and assisting children and adolescents in situations of social vulnerability.
 
 This project was developed with React and Vite, offering a modern and responsive experience to showcase the institute's social programs, team, mission, and ways to contribute.
 
+Built for PEX I and improved during PEX V (extension projects of the Software Development program at Faculdade Descomplica).
+
 ## 🚀 Technologies Used
 
-- **React** 19.0.0 - JavaScript library for building user interfaces
-- **Vite** 6.2.0 - Build tool and development server
-- **React Router DOM** - Page navigation
-- **Tailwind CSS** 4.0.13 - Utility-first CSS framework
-- **Swiper** - Responsive carousels and sliders
-- **React Icons** - Icon library
-- **React Hook Form** - Form management
-- **EmailJS** - Email sending service
-- **React Hot Toast** - Elegant toast notifications
-- **React CountUp** - Number animations
-- **React Modal** - Accessible modal components
+**Application**
+
+- **React** 19 — Library for building user interfaces
+- **Vite** 6 — Build tool and development server
+- **React Router DOM** 7 — Page navigation with per-route code splitting
+- **Tailwind CSS** 4 — Utility-first CSS framework
+- **Swiper** — Testimonial and document carousels
+- **React Hook Form** — Contact form with validation
+- **EmailJS** — Backend-free form submission
+- **React Hot Toast** — Notifications
+- **React Modal** — Accessible modals
+- **React Icons** — Icons
+- **@fontsource-variable/nunito** — Self-hosted Nunito font
+
+**Testing**
+
+- **Vitest** 4 — Test runner (shares the Vite config)
+- **Testing Library** (`react`, `user-event`, `jest-dom`) — User-centric testing
+- **jsdom** — DOM environment
+- **@vitest/coverage-v8** — Coverage reporting
+
+**Build tooling**
+
+- **sharp** — WebP conversion and resizing for images
+- **ESLint** 9 — Static analysis
 
 ## 📁 Project Structure
 
 ```
 irl/
-├── public/              # Static public files
+├── public/                  # Served as-is (robots.txt, sitemap.xml, LCP banner)
+├── scripts/
+│   └── images-to-webp.js    # Converts src/assets to WebP (npm run images)
 ├── src/
-│   ├── assets/          # Images, videos and resources
+│   ├── assets/              # Images (.webp) and video
 │   │   ├── img/
-│   │   │   ├── documentos/
-│   │   │   ├── elementos/
+│   │   │   ├── documentos/  # Certificates and legal documents
+│   │   │   ├── elementos/   # Decorative graphics
 │   │   │   ├── fotos/
 │   │   │   ├── ods/
 │   │   │   └── parceiros/
 │   │   └── videos/
-│   ├── components/      # Reusable components
-│   │   ├── Header.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Banner.jsx
-│   │   ├── Programas/
-│   │   └── ...
-│   ├── pages/           # Application pages
-│   │   ├── Home.jsx
-│   │   ├── Programas.jsx
-│   │   ├── FacaParte.jsx
-│   │   └── Transparencia.jsx
-│   ├── App.jsx          # Main component
-│   ├── main.jsx         # Entry point
-│   └── index.css        # Global styles
-├── package.json
-├── vite.config.js
-└── README.md
+│   ├── components/          # 35 components plus their tests
+│   ├── hooks/
+│   │   ├── useSeo.js        # Per-route title, description and canonical
+│   │   └── useRevelar.js    # Scroll-triggered section reveal
+│   ├── pages/               # One per route
+│   ├── test/
+│   │   └── setup.js         # Global Vitest setup
+│   ├── App.jsx              # Shell and routes
+│   ├── main.jsx             # Entry point
+│   └── index.css            # Tailwind theme and animations
+├── vercel.json              # SPA rewrites and /admin redirect
+├── vite.config.js           # Vite + Vitest + coverage config
+└── package.json
 ```
+
+### Routes
+
+| Route | Page | Notes |
+| --- | --- | --- |
+| `/` | Home | Statically imported (holds the LCP element) |
+| `/programas` | Programs | Per-program anchors, reachable from the home cards |
+| `/transparencia` | Transparency | Certificates and impact numbers |
+| `/participe` | Get involved | Contact form and donation details |
+| `/obrigado` | Submission confirmation | `noindex` |
+| `*` | 404 | `noindex` |
 
 ## 🎯 Features
 
-- ✨ **Responsive Interface** - Adaptive design for desktop, tablet, and mobile
-- 📱 **Mobile Menu** - Navigation optimized for mobile devices
-- 🎠 **Interactive Carousels** - Testimonials, programs, and partners
-- 📝 **Contact Form** - EmailJS integration
-- 💰 **Donation System** - Modal with banking information and donation options
-- 📄 **Transparency Area** - Documents and certifications
-- 🎯 **SDGs (Sustainable Development Goals)** - Alignment with global goals
-- 📊 **Institute Numbers** - Statistics with CountUp animations
-- 🖼️ **Photo Gallery** - Display of activities and programs
-- ⚡ **Optimized Performance** - Optimized build with Vite
+- ✨ **Responsive Interface** — Adapts to desktop, tablet and mobile
+- 📱 **Mobile Menu** — Touch-friendly navigation with current-route indication
+- 🎠 **Interactive Carousels** — Testimonials and documents
+- 📝 **Contact Form** — EmailJS integration with field validation
+- 💰 **Donation System** — PIX drawer with QR code and bank details
+- 📄 **Transparency Section** — Certificates and legal documents in a modal
+- 🎯 **SDGs** — Alignment with the UN Sustainable Development Goals
+- 📊 **Institute Numbers** — Animated counters
+- ♿ **Accessibility** — Keyboard navigation, accessible names on every control, and `prefers-reduced-motion` support
+- 🔍 **SEO** — Open Graph tags, structured data, `sitemap.xml`, `robots.txt`, and per-route title/canonical
+- ⚡ **Performance** — WebP images, per-route code splitting, self-hosted font and lazy loading
 
 ## 🛠️ Installation and Execution
 
 ### Prerequisites
 
-- Node.js (version 16 or higher)
-- npm or yarn
+- Node.js 18 or later (Vite 6 dropped support for earlier versions)
+- npm
 
 ### Installation Steps
 
@@ -90,15 +121,19 @@ irl/
    npm install
    ```
 
-3. **Configure environment variables**
+3. **Set up environment variables**
 
-   Create a `.env` file in the project root:
+   Create a `.env` file at the project root:
 
    ```env
    VITE_EMAILJS_SERVICE_ID=your_service_id
    VITE_EMAILJS_TEMPLATE_ID=your_template_id
-   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   VITE_EMAILJS_USER_ID=your_public_key
    ```
+
+   > EmailJS calls this value _Public Key_ in its dashboard, but the code reads
+   > it as `VITE_EMAILJS_USER_ID`. Without these three variables the contact
+   > form fails on submit.
 
 4. **Run the project in development mode**
 
@@ -114,49 +149,129 @@ irl/
    npm run build
    ```
 
-6. **Preview production build**
+6. **Preview the production build**
+
    ```bash
    npm run preview
    ```
 
-## 🌐 Deploy
+   Available at `http://localhost:4173`.
 
-The project is configured for deployment on Vercel through the `vercel.json` file.
+   > Always audit performance (Lighthouse, PageSpeed) against the preview,
+   > never against `npm run dev`. In development Vite serves every module
+   > separately and unminified, which tanks the score in a way that has nothing
+   > to do with the deployed site.
+
+## 🧪 Testing
+
+The suite runs on **Vitest** with **Testing Library**, querying the screen the
+way a user would (roles and accessible names) rather than by CSS classes or
+internal structure.
+
+```bash
+npm test              # run the suite once
+npm run test:watch    # re-run on save
+npm run test:coverage # generate the coverage report
+```
+
+### Coverage
+
+| Metric | Coverage |
+| --- | --- |
+| Statements | 100% (236/236) |
+| Branches | 100% (81/81) |
+| Functions | 100% (86/86) |
+| Lines | 100% (216/216) |
+
+`npm run test:coverage` writes a browsable report to `coverage/index.html`,
+with line-by-line detail per file. The folder is Git-ignored.
+
+The config sets `include: ['src/**/*.{js,jsx}']` on purpose, so files with **no
+tests at all** still count. Without it V8 would only measure what some test
+imported, and the number would come out inflated.
+
+### What the tests cover
+
+- **Behaviour, not appearance** — what a component does, not how it is styled
+- **Flows that span components** — for example, the "+" button on a home card navigates to `/programas` and the page scrolls to that program
+- **Contact form** — field validation, the payload sent to EmailJS, and the failure path, where the user must not be sent to the thank-you page
+- **Accessibility** — accessible names on controls, `aria-current` on the active route, `aria-expanded` on menus and drawers, and `inert` on whatever is closed
+- **Performance decisions** — only the LCP image gets `fetchpriority="high"`, every other image gets `loading="lazy"`
+
+### Writing new tests
+
+Test files live next to the code as `Component.test.jsx`.
+[`src/test/setup.js`](src/test/setup.js) runs first and handles two details:
+
+- registers Testing Library's `cleanup` between tests;
+- injects a `<div id="root">` into the document, because `react-modal` calls
+  `Modal.setAppElement('#root')` at module scope and throws without that node.
+
+## 🖼️ Images
+
+Images under `src/assets` are committed already converted to WebP. To convert
+new ones:
+
+```bash
+npm run images
+```
+
+[`scripts/images-to-webp.js`](scripts/images-to-webp.js) only processes images
+actually imported by the code, resizes each one to the size it is displayed at
+(2x for retina screens), rewrites the `import` statements and deletes the
+original file. Unused images are listed at the end and left untouched.
+
+## 🌐 Deployment
+
+The project is configured for Vercel deployment through the `vercel.json` file.
 
 To deploy:
 
-1. Install Vercel CLI
+1. Install the Vercel CLI
 
    ```bash
    npm install -g vercel
    ```
 
-2. Run deploy
+2. Run the deployment
+
    ```bash
    vercel
    ```
 
+Remember to register the three `VITE_EMAILJS_*` variables in the Vercel
+dashboard — the local `.env` is not used for production builds.
+
 ## 📜 Available Scripts
 
-- `npm run dev` - Starts the development server
-- `npm run build` - Creates the production build
-- `npm run preview` - Previews the production build locally
-- `npm run lint` - Runs ESLint linter
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Development server (`--host`, reachable on the local network) |
+| `npm run build` | Production build |
+| `npm run preview` | Serves the build at `http://localhost:4173` |
+| `npm run lint` | ESLint |
+| `npm test` | Test suite |
+| `npm run test:watch` | Tests in watch mode |
+| `npm run test:coverage` | Tests with coverage report |
+| `npm run images` | Converts `src/assets` images to WebP |
 
 ## 📧 Contact
 
-**Dr. Rocha Lima Institute**
+**Instituto Dr. Rocha Lima**
 
 - Website: [www.irl.org.br](https://www.irl.org.br)
-- Instagram: [@instituto_rocha_lima](https://instagram.com/instituto_rocha_lima)
-- Email: contato@irl.org.br
+- Email: [irl@irl.org.br](mailto:irl@irl.org.br)
+- Phone: +55 (85) 3243-6120
+- Address: R. Eretides Martins, 977 — São Gerardo, Fortaleza/CE, 60320-350, Brazil
+- Instagram: [@somosirl](https://instagram.com/somosirl)
+- Facebook: [somosirl](https://facebook.com/somosirl)
 
 ## 💖 Support
 
-If you wish to support the Dr. Rocha Lima Institute, visit the donations page or contact them to learn more about how to contribute.
+If you would like to support Instituto Dr. Rocha Lima, visit the [donation page](https://www.irl.org.br/participe) or get in touch to learn more about how to contribute.
 
 ---
 
 <div align="center">
-  Developed for the Dr. Rocha Lima Institute
+  Developed for Instituto Dr. Rocha Lima
 </div>
