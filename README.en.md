@@ -2,7 +2,7 @@
 
 _Read this in other languages: [Português](README.md)_
 
-![Tests](https://img.shields.io/badge/tests-129%20passing-brightgreen)
+![Tests](https://img.shields.io/badge/tests-184%20passing-brightgreen)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 ![React](https://img.shields.io/badge/React-19-61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF)
@@ -82,6 +82,8 @@ irl/
 | `/programas` | Programs | Per-program anchors, reachable from the home cards |
 | `/transparencia` | Transparency | Certificates and impact numbers |
 | `/participe` | Get involved | Contact form and donation details |
+| `/blog` | Blog | Lists posts published in Sanity |
+| `/blog/:slug` | Post | A single post; `noindex` when the slug does not exist |
 | `/obrigado` | Submission confirmation | `noindex` |
 | `*` | 404 | `noindex` |
 
@@ -129,7 +131,13 @@ irl/
    VITE_EMAILJS_SERVICE_ID=your_service_id
    VITE_EMAILJS_TEMPLATE_ID=your_template_id
    VITE_EMAILJS_USER_ID=your_public_key
+
+   # Sanity (see the Blog section)
+   VITE_SANITY_PROJECT_ID=your_project_id
+   VITE_SANITY_DATASET=production
    ```
+
+   A template is available at [`.env.example`](.env.example).
 
    > EmailJS calls this value _Public Key_ in its dashboard, but the code reads
    > it as `VITE_EMAILJS_USER_ID`. Without these three variables the contact
@@ -178,10 +186,10 @@ npm run test:coverage # generate the coverage report
 
 | Metric | Coverage |
 | --- | --- |
-| Statements | 100% (236/236) |
-| Branches | 100% (81/81) |
-| Functions | 100% (86/86) |
-| Lines | 100% (216/216) |
+| Statements | 100% (380/380) |
+| Branches | 94.9% (186/196) |
+| Functions | 100% (126/126) |
+| Lines | 100% (348/348) |
 
 `npm run test:coverage` writes a browsable report to `coverage/index.html`,
 with line-by-line detail per file. The folder is Git-ignored.
@@ -206,6 +214,93 @@ Test files live next to the code as `Component.test.jsx`.
 - registers Testing Library's `cleanup` between tests;
 - injects a `<div id="root">` into the document, because `react-modal` calls
   `Modal.setAppElement('#root')` at module scope and throws without that node.
+
+## 📰 Blog (Sanity)
+
+The blog reads posts from an external **Sanity** project so the Institute's team
+can publish content without a developer. The site only consumes the public read
+API — **no token ever reaches the frontend**, because a token in browser code is
+public in practice.
+
+The repository holds two parts:
+
+- **the site** (this folder), which only reads;
+- **[`studio/`](studio/)**, the editing panel the team writes in. It is a
+  separate app, hosted for free by Sanity, and never enters the site bundle.
+
+### 1. Get the Project ID
+
+At [sanity.io/manage](https://sanity.io/manage), open the project and copy the
+**Project ID**. It is not a secret: it appears in the public API URL.
+
+### 2. Deploy the editing panel
+
+```bash
+cd studio
+npm install
+npx sanity login
+npx sanity deploy
+```
+
+`deploy` asks for a name and returns the panel address
+(`https://your-name.sanity.studio`). That is the link you hand to the Institute's
+team — anyone publishing must be invited under **Members** in sanity.io/manage.
+
+The Project ID sits literally in `studio/sanity.cli.js` and
+`studio/sanity.config.js`. That is deliberate: it is **not a secret** (it shows
+up in the public API URL), the CLI evaluates those files before loading any
+`.env`, and `.env` is not versioned — leaving it there would break the panel for
+anyone cloning the repo. To point at another project, change the value in both
+files.
+
+### 3. Allow public reads and the site origin
+
+Under **sanity.io/manage → API**:
+
+- **Dataset**: `production` must be set to **Public**. Otherwise the API answers
+  401 and the site shows the unavailability notice.
+- **CORS origins**: add `https://www.irl.org.br` and, for development,
+  `http://localhost:5173`. Leave *Allow credentials* **unchecked** — reads are
+  anonymous and do not need it.
+
+Do not create an API token for the site. It reads as an anonymous visitor, and
+that is what keeps the frontend free of secrets.
+
+### 4. Point the site at the project
+
+```env
+VITE_SANITY_PROJECT_ID=your_project_id
+VITE_SANITY_DATASET=production
+```
+
+For production, register the same variables in the Vercel dashboard.
+
+### 5. Publish a post
+
+In the panel, **Post do blog → Create**. The fields:
+
+| Field | Purpose |
+| --- | --- |
+| Título | Post title and browser tab title |
+| Endereço da página | Generated from the title; it is the URL (`/blog/my-post`) |
+| Data de publicação | Orders the listing, newest first |
+| Resumo | Card text in the listing and the description on Google |
+| Imagem de capa | Shown on the card and at the top of the post |
+| Autor | Optional |
+| Conteúdo | Post body |
+
+The **image description** is required on purpose: it is what screen readers
+announce. The content editor offers no "Heading 1" because the post title is
+already the page `h1` — a second `h1` in the body would break the hierarchy.
+
+Click **Publish**. Saving without publishing leaves a draft, and drafts do not
+appear on the site.
+
+### How the site behaves without Sanity
+
+The blog never takes the site down. If the variables are missing, Sanity is
+offline, or there are no posts yet, the page shows an explanatory notice and the
+rest of the site keeps working.
 
 ## 🖼️ Images
 

@@ -1,7 +1,14 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
+
+// O CMS é mockado para falhar, e não deixado sem configuração: assim o teste
+// não depende de o .env existir ou não na máquina de quem roda.
+vi.mock("./api/cms", () => ({
+  listarPosts: vi.fn().mockRejectedValue(new Error("CMS fora do ar")),
+  buscarPostPorSlug: vi.fn().mockRejectedValue(new Error("CMS fora do ar")),
+}));
 
 describe("App", () => {
   it("monta o esqueleto do site: header, main e footer", () => {
@@ -60,6 +67,29 @@ describe("App", () => {
     render(<App />);
 
     expect(await screen.findByText(texto)).toBeInTheDocument();
+    window.history.pushState({}, "", "/");
+  });
+
+  // Sem VITE_STRAPI_URL configurada nos testes, o blog cai no estado de erro —
+  // que é exatamente o comportamento desejado em produção se o CMS sair do ar:
+  // a página explica, em vez de quebrar o site.
+  it("carrega o blog e degrada com recado quando o CMS não responde", async () => {
+    window.history.pushState({}, "", "/blog");
+    render(<App />);
+
+    expect(
+      await screen.findByText(/Não conseguimos carregar o blog agora/)
+    ).toBeInTheDocument();
+    window.history.pushState({}, "", "/");
+  });
+
+  it("carrega a rota de post individual", async () => {
+    window.history.pushState({}, "", "/blog/um-post-qualquer");
+    render(<App />);
+
+    expect(
+      await screen.findByText(/Não conseguimos carregar este post/)
+    ).toBeInTheDocument();
     window.history.pushState({}, "", "/");
   });
 

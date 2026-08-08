@@ -8,12 +8,13 @@ import { Header } from "./components/Header";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Home } from "./pages/Home";
-import Blog from "./pages/Blog";
 
 const rota = (importar, chave) =>
   lazy(() => importar().then((m) => ({ default: m[chave] })));
 
 const Programas = rota(() => import("./pages/Programas"), "Programas");
+const Blog = rota(() => import("./pages/Blog"), "Blog");
+const Post = rota(() => import("./pages/Post"), "Post");
 const Transparencia = rota(() => import("./pages/Transparencia"), "Transparencia");
 const FacaParte = rota(() => import("./pages/FacaParte"), "FacaParte");
 const Obrigado = rota(() => import("./pages/Obrigado"), "Obrigado");
@@ -34,6 +35,7 @@ function App() {
               <Route path="/participe" element={<FacaParte />} />
               <Route path="/obrigado" element={<Obrigado />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<Post />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

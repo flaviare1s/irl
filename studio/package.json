@@ -1,0 +1,17 @@
+{
+  "name": "irl-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Painel de edicao do blog do Instituto Dr. Rocha Lima",
+  "scripts": {
+    "dev": "sanity dev",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanity": "^3.68.0",
+    "styled-components": "^6.1.13"
+  }
+}

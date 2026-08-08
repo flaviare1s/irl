@@ -4,7 +4,9 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist', 'coverage'] },
+  // studio/ é um app separado (Sanity Studio), com suas próprias dependências
+  // e globals de Node. Não faz parte do bundle do site.
+  { ignores: ['dist', 'coverage', 'studio'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
