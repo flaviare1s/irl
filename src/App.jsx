@@ -8,6 +8,7 @@ import { Header } from "./components/Header";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Home } from "./pages/Home";
+import Blog from "./pages/Blog";
 
 const rota = (importar, chave) =>
   lazy(() => importar().then((m) => ({ default: m[chave] })));
@@ -32,6 +33,7 @@ function App() {
               <Route path="/transparencia" element={<Transparencia />} />
               <Route path="/participe" element={<FacaParte />} />
               <Route path="/obrigado" element={<Obrigado />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

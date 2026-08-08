@@ -6,6 +6,7 @@ export const DesktopMenu = () => {
       <NavLink className="link-nav" to='/programas'>Programas</NavLink>
       <NavLink className="link-nav" to='/transparencia'>Transparência</NavLink>
       <NavLink className="link-nav" to='/participe'>Faça parte</NavLink>
+      <NavLink className="link-nav" to='/blog'>Blog</NavLink>
     </div>
   )
 }

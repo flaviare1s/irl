@@ -60,6 +60,7 @@ export const MobileMenu = () => {
           <NavLink to="/programas" className="text-white link-nav" onClick={closeMenu}>Programas</NavLink>
           <NavLink to="/transparencia" className="text-white link-nav" onClick={closeMenu}>Transparência</NavLink>
           <NavLink to="/participe" className="text-white link-nav cursor-pointer" onClick={closeMenu}>Faça parte</NavLink>
+          <NavLink to="/blog" className="text-white link-nav cursor-pointer" onClick={closeMenu}>Blog</NavLink>
         </div>
       </div>
     </div>
